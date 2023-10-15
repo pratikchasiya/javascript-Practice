@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>IMMEDIATELY INVOKED FUNCTION</h1>
+</body>
+<script>
+    //AA FUNCTION NO MATLAB A CHE K JYA AAPRE FUNCTION BANAVIYE ANE TYA J ANE TART EXECUTE KARI DAI A TO ANE IMMEDIATELY INVOKED FUNCTION KEHVAY
+
+    // IMMEDIATELY INVOKED FUNCTION
+   (function (){
+        console.log("Hello world");
+        alert("Hello world");
+    })();
+
+    // KOI NE APRE GLOBAL SPACE MA DECLARE KARO TO ANE VADHRE RAM JOISE MATE KOI FUNCTION AVA HOI K SHORT TIME MATE JARUR HOI TO P6I ANI JARUR NAI HOI TO ANE RAM USE NAI KARVA DEVAY
+    (function (){
+        let string = "Hello";
+        console.log(string);
+        alert(string);
+    })();
+    //RAM USE KARSE NAHI
+    //FUNCTION PURU THY TYRE STRING VARIABLE DELETE THAI JSE
+
+
+    //JAVASCRIPT MA BO BDHA KAM MATE EXTERNAL CODE NI JARUR PADTI HOI CHE TO APRE THIRD PARTY NA CODE NE HTML MA INCLUDE KARAVI A CHE PAN PROBLEM A THY CHE K APNA AND THIRD PARTY MA GLOBAL SPACE NI UNDER VARIABLE NA NAME SAME HOI TO ERROR AVE CHE
+    
+    // ==MY JS CODE===
+    let msg = "Hello";
+    function show(){
+        console.log(msg);
+    }
+    show();
+
+    //=== THIRD PARTY JS CODE====
+    //THIRD PARTY NA CODE NE IMMEDIATELY INVOKED FUNCTION BANAVI DAI A TO ERROR NAI AAVE KARAN K TENO USE THAYA PA6I TE DELETE THAI JSE TETHI APARA JS CODE NE NADSE NAI 
+   (function(){
+    let msg = "Hello everyone";
+    function greet (){
+        console.log(msg);
+    }
+    greet();
+   })();
+</script>
+</html>

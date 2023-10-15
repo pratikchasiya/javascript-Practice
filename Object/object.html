@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>OBJECT</h1>
+    <script>
+
+        //PESRON MEANS OBJECT NAME , // OBJECT {} MA LAKHAY , // FIRSTNAME : PRATIK ANE OBJECT NI PROPERTY KEHVAY, // FIRST NE KEY KEHVAY ANE PRATIK NE VALUE KEHVAY
+        let person = {
+            firstName: "Pratik",
+            lastName: "Chasiya",
+            age: 25
+        };
+        person.age = 22;  //AA RITE PROPERTY NE CHANGE KARI SAKAY
+        delete person.age; // AA RITE PROPERTY NE DELETE KARI SAKAY
+
+        person.age = 25; // AA RITE PROPERTY NE BAHAR THI ADD PN KARI SAKAY
+
+
+        console.log(person);
+        // output : {firstName: 'Pratik', lastName: 'Chasiya', age: 25}
+        console.log(person.firstName);
+        //output : Pratik
+        console.log(person.height);
+        //output : undefined
+        //PROPERTY DEFINE NI HSE TO OUTPUT UNDEFINED AVSE
+
+        //KOI PROPERTY PERSON NI CHE K NAHI TE CHECK KARVA MATE
+
+        console.log('firstName' in person);  //output : true
+        console.log('height' in person); // output : false
+
+        //OBJECT NI BADHI PROPERTY NE ITRATE KARVA MATE FOR IN LOOP USE THAY
+        for (let key in person) {
+            console.log(key); // output : firstName lastName age  // KHALI PROPERTY NI KEY APSE
+
+            // JO PROPERTY NI VALUE SATHE ITRATE KARVU HOI TO
+            console.log(`${key} : ${person[key]}`);
+           // output: firstName: Pratik lastName : Chasiya  age : 25
+                
+                   
+
+
+        }
+    </script>
+</body>
+
+</html>

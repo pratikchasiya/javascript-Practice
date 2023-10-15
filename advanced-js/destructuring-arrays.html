@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const student = ["Deepak Nahak", 22, 5.9, ["Surat", 395003]];
+
+        // let name = student[0];
+        // let height = student[2];
+        // let pin = student[3][1];
+        // console.log(name);
+        // console.log(height);
+        // console.log(pin);
+
+        // const [name, , height, [city, pin]] = student;
+        // console.log(name);
+        // console.log(height);
+        // console.log(pin);
+
+        calc = (a, b) => {
+            const addition = a+b;
+            const subtraction = a-b;
+            const multiplication = a*b;
+            const division = a/b;
+
+            return [addition, subtraction, multiplication, division];
+        }
+        // console.log(calc(20, 10));
+        const [add, , multiply, ] = calc(20, 10);
+        // console.log(add);
+        // console.log(multiply);
+    </script>
+</body>
+</html>

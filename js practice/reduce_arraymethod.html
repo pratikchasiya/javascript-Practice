@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>REDUCE ARRAY METHOD</h1>
+    <script>
+        //REDUCE METHOD MA 2 PARAMETER PASS KRVA PDE ACCUMULATOR AND CURRENT VALUE ACCUMULATOR MA ARRAY NO 1ST ELEMENT AAVSE AND CURRENT VALUE MA ARRAY NO 2ND ELEMENT AVSE ANE P6I J OPERATION KRVANU HSE TE THSE ANE J OUTPUT AVSE TE ACCUMULATOR MA STORE THSE HVE NEXT STEP MA ACCUMULATOR MA J VALUE HSE TE AND CURRENT VALUE MA ARRAY NO NEXT ELEMENT AVSE AA RITE OPERATION THSE JYA SUDHI ARRAY PATE NAHI TYA SUDHI
+        let x = [10, 20, 30, 40, 50];
+        let y = x.reduce((accumulator, currentvalue) => accumulator + currentvalue);
+        console.log(y); //output : 150
+        let z = x.reduce((accumulator, currentvalue) => accumulator - currentvalue);
+        console.log(z);  // output : -130
+    </script>
+</body>
+</html>

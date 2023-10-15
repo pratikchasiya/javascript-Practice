@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            display: flex;
+            justify-content: space-between
+        }
+        .sec {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        .sec1{
+            background-color: aqua;
+        }
+        .btn{
+            text-align: center;
+        }
+        .btn button{
+            padding: 5px 10px;
+            margin-top: 10px;
+        }        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="cls">
+            <div class="sec"></div>
+            <div class="btn"><button>Toggle button</button></div>
+        </div>
+        <div class="cls">
+            <div class="sec"></div>
+            <div class="btn"><button>Toggle button</button></div>
+        </div>
+        <div class="cls">
+            <div class="sec"></div>
+            <div class="btn"><button>Toggle button</button></div>
+        </div>
+        <div class="cls">
+            <div class="sec"></div>
+            <div class="btn"><button>Toggle button</button></div>
+        </div>
+    </header>
+    <script>
+        let div = document.getElementsByClassName("cls");
+        let btn = document.getElementsByClassName("btn");
+        for(let x of div){
+            x.lastElementChild.addEventListener('click',function(){
+                x.firstElementChild.classList.toggle("sec1");
+            })
+            
+        }
+        
+    </script>
+</body>
+
+</html>

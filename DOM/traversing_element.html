@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>TRAVESING ELEMENT</h1>
+    <ul id="main">
+        <li>List-1</li>
+        <li id="first">List-2</li>
+        <li>List-3</li>
+        <li>List-4</li>
+    </ul>
+    <ul id="intro">
+        <li>List-A</li>
+        <li>List-B</li>
+        <li>List-C</li>
+    </ul>
+
+    <div id="a">
+        <ul>
+            <li>1</li>
+            <li>2
+                <ul>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script>
+        // 1. CHILD NE ID APELU HOI AND PARENTS NE CHANGE KARVU HOI TO
+        let child = document.getElementById("first");
+        child.style.color = "red";
+        let prt = child.parentElement;
+        prt.style.backgroundColor = "yellow";
+        console.log(prt);
+
+        // 2. PARENTS NE ID APELU HOI AND CHILDREN NE CHANGE KARVU HOI TO
+        let prt1 = document.getElementById("main");
+
+        // FIRST CHILD NE SELECT KARVA MATE
+        let child1 = prt1.firstElementChild;
+        child1.style.color = "red";
+        console.log(child1);
+
+        // LAST ELEMENT NE SELECT KARVA MATE
+        let childlast = prt1.lastElementChild;
+        childlast.style.color = "green";
+        console.log(childlast);
+
+        // 3. SIBLINGS SELSECT KARVA MATE
+        // (i) PREVIOUS CHILD NE CHANGE KARVU HOI TO
+        let sblprev = child.previousElementSibling;
+        sblprev.style.color = "blue";
+
+        // (ii) NEXT CHILD NE CHANGE KARVU HOI TO
+        sblnext = child.nextElementSibling;
+        sblnext.style.color = "purple";
+
+
+
+        // ALL CHILD NE SELECT KARVA MATE
+        let parents = document.getElementById("intro");
+        parents.style.backgroundColor = "pink";
+        let childall = parents.children;
+        for (let x of childall) {
+            x.style.color = "blue";
+        }
+        console.log(childall);
+
+        // PARENT TO UNDER NA CHILD NE SELECT KARVA
+        let par = document.getElementById("a");
+        let cld = par.firstElementChild.lastElementChild.firstElementChild.firstElementChild.nextElementSibling;
+        cld.style.color = "yellow";
+        console.log(cld);
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

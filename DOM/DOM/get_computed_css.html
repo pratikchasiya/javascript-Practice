@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>GET COMPUTED STYLE</h1>
+    <button id="btn">Click me</button>
+    <script>
+        let btn = document.getElementById("btn");
+        btn.style.cssText = "background-color : grey; color : pink;"
+        let val = getComputedStyle(btn);
+        console.log(val);
+        // BY DEFAULT J PN STYLE PEHLE THI HSE A BDHI BATAVSE
+        console.log(val.color); //AA RITE LKHSU TO PERTICULAR J NI VALUE JOITE HSE TE MLSE
+       
+    </script>
+</body>
+</html>

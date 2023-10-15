@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <script>
+        // FOCUS EVENT APRE JYRE APRE ANA PR FOCUS MEANS CLICK KRSU TYRE AMA BACKGROUND COLOR CHANGE THAI JSE
+        let input = document.getElementById("input");
+        input.addEventListener('focus',function(){
+            input.style.backgroundColor = "pink";
+        });
+        // BLUR EVENT THI APRE JYRE FOCUS KARYA P6I BAHAR AVI NE CLICK KRSU TO ANO BACKGROUND COLOR CHANGE THAI JSE
+        input.addEventListener('blur',function(){
+            input.style.backgroundColor = "white";
+        });
+
+    </script>
+</body>
+</html>

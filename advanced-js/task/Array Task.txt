@@ -1,0 +1,13 @@
+Array Tasks:
+
+1. Get all the number from array
+2. Get all the string from array
+3. Get all falsy values from array
+4. Get all truty values from array
+5. Get sum of all number in array
+6. Get all NAN values
+7. Get all values which includes ""e""
+8. Get all values endwith ""d""
+9. Count number of falsy values"
+
+taskArray = ['undefined', null, 98, -4, 'oscar', 0, 5.01, undefined, { firstName: 'John', lastName: 'Wick',age:65 }, true]

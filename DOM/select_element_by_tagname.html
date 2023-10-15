@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>SELECT ELEMENT BY TAG NAME</h1>
+    <h2 id="main">Oscar</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <div>
+        <h2>Career</h2>
+        <h2>Point</h2>
+    </div>
+
+    <script>
+        let elm = document.getElementsByTagName("h2");
+        for (let x of elm) {
+            x.innerHTML = "Pratik";
+        }
+        console.log(elm);
+        
+        let elm1 = document.getElementById("main");
+        elm1.innerHTML = "Hello";
+    </script>
+
+</body>
+
+</html>

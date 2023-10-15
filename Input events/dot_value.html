@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button id="btn">Get value</button>
+    <script>
+        // ELEMENT.VALUE THI APRE J VALUE INPUT MA LAKHSU TE CONSOLE MA SAME DEKHADSE
+        let btn = document.getElementById("btn");
+        btn.addEventListener('click',function(){
+            let elm = document.getElementById("input");
+            let value = elm.value;
+            // let get = btn.previousElementSibling.value;
+            let get = this.previousElementSibling.value;
+            // console.log(value);
+            console.log(get);
+        })
+    </script>
+</body>
+</html>

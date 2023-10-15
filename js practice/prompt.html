@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>PROMPT</h1>
+    </div>
+    <script>
+        // ========jo by default value lavi hoi to aa rite lakhvu to by default 25 aavi jse pop up ma ane hatavavu hoi top pn hatavi sakay=====
+        // let age = prompt("Enter Your Age",25);
+
+        let age = prompt("Enter Your Age");
+        if(age){
+            if(age>=18){
+                document.write("You can vote");
+            }
+            else{
+                document.write("You can not vote");
+            }
+        }
+        else{
+            document.write("Please Enter Your age again");
+        }
+
+        // =========age==null lesu to ok pr click krsu to null == 0 thai jse ane ano ans you can not vote avse=====
+
+        // let age = prompt("Enter Your Age");
+        // if(age==null){
+        //     document.write("Please Enter age Your again"); 
+        // }
+        // else{
+        //     if(age>=18){
+        //         document.write("You can vote");
+        //     }
+        //     else{
+        //         document.write("You can not vote");
+        //     }
+        // }
+    </script>
+</body>
+</html>

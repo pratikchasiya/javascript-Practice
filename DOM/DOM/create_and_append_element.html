@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- CREATE AND APPEND ELEMENT -->
+    <div id="main">
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ad.</p>
+        <h2>Pratik</h2>
+    </div>
+    <ul id="ul">
+        <li>List-1</li>
+        <li>List-2</li>
+        <li>List-3</li>
+        <li>List-4</li>
+    </ul>
+    <script>
+        // KOI ELEMENT NE ADD KRVU HOI TO ANE CREATE KRI ANI UNDER TEXT LAKHIYE TO A ADD THAI JSE PN APPEND CHILD A ELEMENT NE LAST MA ADD KRSE
+        let div = document.getElementById("main");
+        let elm = document.createElement("h1");      /*  CREATE */
+        let text = document.createTextNode("Chasiya");
+        elm.appendChild(text);
+        div.appendChild(elm);
+
+        // APPEND KARELA ELEMENT NE ID AND CLASS APVA MATE
+        // ID APVA MATE
+        elm.id = "part_1";
+        elm.id = "part_2";
+        /* JO EK J ELEMENT NE 2 ID NAI API SAKAY AND JO 2 ID APIYE TO J NICHE VALI ID APELI HSE TE ID A ELEMENT NE LAGI JSE JEM K UPR NA EXAMPLE MA PART_2 ID LAGI GAI HSE PART_1 NI JAGYA A */
+
+        // CLASS APVA MATE
+        elm.className = "cls1 cls2";
+        // elm.className = "cls3";
+        /* CLASS MA PAN AVU J 6 EK THI VDHRE CLASS APYA HOI TO A NICHE J CLASS HSE TE J LAGSE */
+        /* BUT JO EK SATHE J BNNE CLASS NA NAME APSU SPACE API NE TO BNNE CLASS LAGI JSE ANE */
+
+        // BODY MA LAST MA KOI ELEMENT NE APPEND KARVU HOI TO
+        let elm2 = document.createElement("h2");
+        let text2 = document.createTextNode("Hello");
+        elm2.appendChild(text2);
+        document.body.appendChild(elm2);
+        // BODY NI BAHAR HELLO LAKHAI JSE H2 TAG MA
+
+
+        // SHORT METHOD OF APPEND (2nd TYPE)
+     
+        let ul = document.getElementById("ul");
+        let list = document.createElement("li");
+        list.textContent = "List-5";
+        ul.appendChild(list);
+
+        // LI NI UNDER LIST-5 ADD THAI JSE
+
+
+        // KOI ELEMENT NE READ KARVU HOI TO
+        let paragraph = document.getElementById("para");
+        console.log(paragraph.textContent);
+        // P MA J LAKHYU HSE TE CONSOLE MA READ KARI SAKAY
+
+       
+
+    </script>
+</body>
+
+</html>

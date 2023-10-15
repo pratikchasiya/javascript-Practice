@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>DIFFERANCE BETWEEN MAP, FLAT, FLATMAP</h2>
+    <script>
+        // DIFFRENCE BETWEEN MAP , FLAT , FLATMAP
+        let num = [1, 2, 3, 4, 5];
+
+        let result1 = num.map(x => x**2);
+        console.log(result1); // [1, 4, 9, 16, 25]
+
+        // ARRAY NI UNDER ARRAY BANSE
+        let result2 = num.map(x => [x**2]);
+        console.log(result2); //  [Array(1), Array(1), Array(1), Array(1), Array(1)]
+
+        // EK SATHE 2 OPERATION PN KARI SAKAY FIRST MAPPING KARYU P6I ANE FLAT KARYU
+        let result3 = num.map(x => [x**2]).flat();
+        console.log(result3); // [1, 4, 9, 16, 25]
+
+        //FLATMAP THI BNNE OPERATION SATHE THAI JSE PEHLA MAP THSE P6I FLAT THSE
+        let result4 = num.flatMap(x => [x**2]);
+        console.log(result4); // [1, 4, 9, 16, 25]
+    </script>
+</body>
+</html>

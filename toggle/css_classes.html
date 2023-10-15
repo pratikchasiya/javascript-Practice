@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cls{
+            background-color: aqua;
+            color: red;
+        }
+        .dim{
+            border: 1px solid black;
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="cls cls1">
+        <h1>CSS CLASSES</h1>
+    </div>
+    <script>
+        let box = document.getElementById("box");
+        console.log(box.classList); // CLASS NO EK ARRAY BANI JSE
+        for(let x of box.classList){
+            console.log(x);  // AMA JETLA PN CLASS HSE A BATAVSE
+        }
+        box.classList.add("dim"); //NEW CLASS ADD KARVA MATE AA RITE LAKHVANU
+        box.classList.remove("cls"); // CLS NAME NO CLASS REMOVE THAI JSE
+        box.classList.replace("cls1","cls") // CLS1 NI JAGYA A CLS CLASS REPLACE THAI JSE
+        // 2 PARAMETER PASS KARVANA AMA 1ST PARAMETER MA KONE REPLACE KARVO CHE AND 2ND PARAMETER MA KONE REPLACE KRVANO CHE
+
+        // KOI CLASS KOI ELEMENT MA CHE K NAI TE CHECK KARVA MATE AND JO LAGELO HSE A CLASS TO TRUE AVSE AND NAI LAGELO HSE TO FALSE AVSE
+        //CONTAINS
+        let check = box.classList.contains("cls");
+        console.log(check); // output true avse
+        let check1 = box.classList.contains("div");
+        console.log(check1); // output false avse
+    </script>
+</body>
+</html>

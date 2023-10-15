@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>OBJECT PROTOTYPES</h1>
+    <script>
+        // METHOD AND PROPERTY NE CONSTRUCTOR FUNCTION NI BAHAR PAN PROTOTYPE THI ADD KARI SAKAY
+        function Student(fn, ln, age, id) {
+            this.firstName = fn;
+            this.lastName = ln;
+            this.age = age;
+            this.id = id;
+        }
+
+        var Student1 = new Student("Pratik", "Chasiya", 25, 12);
+        console.log(Student1);
+        // output : Student {firstName: 'Pratik', lastName: 'Chasiya', age: 25, id: 12}
+
+
+        // KOI PN NEW OBJECT HOI ANE AA RITE BAHAR THI ADD KARI SAKAY
+        var Student2 = new Student("Mehul", "Waghela", 26, 9);
+        console.log(Student2);
+        // output : Student {firstName: 'Mehul', lastName: 'Waghela', age: 26, id: 9}
+
+        // AA RITE PROPERTY NE ADD KARI SAKAY PROTOTYPE THI AND AA PROPERTY BDHA J OBJECT MA ADD THAI JSE
+        Student.prototype.nationality = "Indian";
+        // STUDENT = OBJECT CONSTRUCTOR NAME | NATIONALITY : INDIAN = PROPERTY J ADD KARI CHE TE 
+        console.log(Student1.nationality);  // output : Indian
+
+        //METHOD ADD KARVA MATE
+        Student.prototype.name = function () {
+            return this.firstName + " " + this.lastName;
+        }
+        console.log(Student1);
+        console.log(Student1.name());  // OUTPUT : Pratik Chasiya
+
+        // KOI OBJECT MA KOI PROPERTY ADD KARVI HOI TO TO DIRECT OBJECT NU NAME LAKHI NE ADD KARI SAKAY AMA PROTOTYPE NI JARUR NATHI
+        // JYRE CONSTRUCTOR FUNCTION MA KOI PROPERTY ADD KARVI HOI TO PROTO TYPE FUNCTION NO USE THY
+
+
+
+
+
+    </script>
+</body>
+
+</html>

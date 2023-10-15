@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>REMOVE CHILD ELEMENT</h1>
+    <ul id="ul">
+        <li>List-1</li>
+        <li>List-2</li>
+        <li>List-3</li>
+        <li>List-4</li>
+    </ul>
+    <script>
+    let prt = document.getElementById("ul");
+    let list = prt.lastElementChild.previousElementSibling;
+    prt.removeChild(list);
+    // KOI PN ELEMENT NE REMOVE KARVU HOI TO PEHLA ANA PARENTS NE PAKDI P6I ANA J CHILD NE REMOVE KARVU 6 ANE PAKDI NE PA6I ANE REMOVE KARI SAKAY
+
+    // AKHA UL NE REMOVE KARVU HOI TO
+    // document.body.removeChild(prt);
+    // AKHO UL REMOVE KARVA PEHLA AMA BODY NE PAKDAVU PDE P6I UL NE PKADI NE REMOVE KARI SAKAY
+    </script>
+</body>
+</html>

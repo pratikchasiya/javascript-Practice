@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Pratik</h1>
+    </div>
+    <script>
+      // =====1st ype======
+
+      let age = prompt("Enter your age");
+      let id = prompt("Do you have voter id card?"); 
+        
+
+      if (age >= 18 && id == 'yes'){
+        console.log("You can vote");
+      } 
+      else if (age >= 18 && id == 'no') {
+        console.log("Apply for voter id card?");
+      } 
+        else {
+        console.log("You can not vote");
+      }
+
+      //   ====2nd type ==========
+
+      //   let age = 21;
+      //   let id = "no";
+
+      //   if (age >= 18 && id == "yes") {
+      //     alert("You can vote");
+      //   } else if (age >= 18 && id == "no") {
+      //     alert("Apply for voter id card?");
+      //   } else {
+      //     alert("You can not vote");
+      //   }
+
+      //   =====3rd type======
+
+      //   let age = 21;
+      //   let id = "yes";
+      //   document.write((age>=18)?(id=='no')?"You can vote":"Apply for voter id card?":"You can not vote");
+
+      // ===user define===
+      // let age = prompt("Enter your age");
+      // let id = prompt("Do you have voter id card?")
+      // document.write((age>=18)?(id=='yes')?"You can vote":"Apply for voter id card?":"you can not vote");
+    </script>
+  </body>
+</html>

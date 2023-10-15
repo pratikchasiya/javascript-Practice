@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <h1>
+            TEMPERATURE CONVERSION
+        </h1>
+    </div>
+    <script>
+        let temp = prompt("Enter any 1 of 3, 1 = celsius, 2 = fahrenheit, 3 = kelvin", 1), f = 0, c = 0, k = 0;
+        temp = Number(temp);
+        switch (temp) {
+            case 1:
+                c = prompt("Enter value in celsius");
+                c = Number(c);
+                f = (1.8 * (c) + 32);
+                k = (c + 273);
+                document.write(`${c} celsius = ${f} fahrenheit`);
+                document.write("<br>");
+                document.write(`${c} celsius = ${k} kelvin`);
+
+            case 2:
+                f = prompt("Enter value in fahrenheit");
+                f = Number(f);
+                c = (f - 32) / 1.8;
+                k = (5 / 9) * (f - 32) + 273.15;
+                document.write(`${f} fahrenheit = ${c} celsius`);
+                document.write("<br>");
+                document.write(`${f} fahrenheit = ${k} kelvin`);
+
+            case 3:
+                k = prompt("Enter value in kelvin");
+                k = Number(k);
+                c = (k - 273.15);
+                f = (k - 273.15) * (9 / 5) + 32;
+                document.write(`${k} kelvin = ${c} celsius`);
+                document.write("<br>");
+                document.write(`${k} kelvin = ${f} fahrenheit`);
+        }
+    </script>
+</body>
+
+</html>

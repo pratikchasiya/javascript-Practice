@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CHANGE ATTRIBUTE</h1>
+    <button id="btn" name="form">Click me</button>
+    <script>
+        let btn = document.getElementById("btn");
+        btn.setAttribute("class","cls");
+        // KOI NEW ATTRIBUTE ADD KARVO HOI TO SET ATTRIBUTE USE THY
+        // AHI 2 PARAMETER PASS KARVANA 1ST PARAMETER MA NEW ATTRIBUTED NU NAME AND 2ND ATTRIBUTED MA VALUE APVANI
+
+        //KOI ATTRIBUTE NI VALUE JANVI HOI TO GET ATTRIBUTE USE THY
+        // GET ATTRIBUTE
+        let val = btn.getAttribute("class");
+        console.log(val);  // output : cls
+
+        // KOI ATTRIBUTE NE REMOVE KARVA MATE
+        // REMOVE ATTRIBUTE
+        let rem = btn.removeAttribute("name");
+       // NAME NAM NO ATTRIBUTE REMOVE THAI JSE
+
+       // KOI ATTRIBUTE CHE K NAI TE CHECK KARVA MATE
+       // HAS ATTRIBUTE
+       let check = btn.hasAttribute("id");
+       console.log(check);
+       // JO A ATTRIBUTE HSE TO OUTPUT TRUE APSE
+
+       let check1 = btn.hasAttribute("style");
+       console.log(check1);
+       // STYLE NAME NO ATTRIBUTE NTHI TO OUTPUT FALSE AVSE
+    </script>
+</body>
+</html>

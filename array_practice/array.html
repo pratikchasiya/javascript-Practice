@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ARRAY PRACTICE</h1>
+    <script>
+        // LENGHTH
+        let x = [1, 2, 3, 4, 5];
+        x.length = 3;
+        console.log(x);
+        x.length = 5;
+        console.log(x);
+
+        //REVERSE
+        let rev = [1, 2, 3, 4, 5];
+        rev.reverse();
+        console.log(rev);
+
+        //SPREAD METHOD
+        [...rev].reverse();
+        console.log(rev);
+
+        //SORT METHOD
+        let sort1 = ['c','p', 'b', 'k', 'd'];
+        sort1.sort();
+        console.log(sort1);
+
+        let price = [10, 500, 70, 20, 90];
+        let y=price.sort();
+        console.log(y);
+
+        let name = ['pratik','mehul','dev','krishnanaiyer'];
+        let name1 = name.sort((a,b) =>a.length - b.length);
+        console.log(name1);
+        // output : ['dev', 'mehul', 'pratik', 'krishnanaiyer']
+
+        //FILL METHOD
+        let fill = [1,2,3,4,5];
+        // fill.fill(10);
+        fill.fill(7,1,3);
+        console.log(fill);
+
+        //JOIN METHOD
+        let join = ['A','B','C','D','E'];
+        let z = join.join(" & ");
+        console.log(z);
+        
+        //ARRAY TO STRING
+        let arr = ['pratik','mehul','darshan'];
+        let str = arr.toString();
+        console.log(str);
+
+        //NESTED ARRAY 
+        let arr1 = [1,2,3,['Apple','Banana'],[5,6]];
+        let str2 = arr1.toString();
+        console.log(str2);
+
+        //CONCAT METHOD
+        let con1 = [1,2,3];
+        let con2 = [4,5,6];
+        let con3 = [7,8,9];
+        let con = con1.concat(con2,con3);
+        console.log(con);
+
+        //SPLICE METHOD
+        let spl = [2,3,4,5,6,7];
+        let spl2 = spl.splice(3,1,9);
+        console.log(spl2);
+        console.log(spl);
+
+        let spl3 = [11,12,13,14,15];
+        let spl4 = spl3.splice(2,-2,50,51,52);
+        console.log(spl4);
+        console.log(spl3);
+    </script>
+</body>
+</html>

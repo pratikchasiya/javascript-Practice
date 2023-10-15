@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="main">
+        <li>List-1</li>
+        <li>List-2</li>
+        <li>List-3</li>
+        <li>List-4</li>
+    </ul>
+    <button id="btn">Click me</button>
+    <script>
+        // ADD EVENT LISTENER METHOD SCRIPT NI UNDER LAKAHY
+        // EK EVENT PAR MULTIPLE EVENT LISTENER LAGAVI SAKAY
+        let btn = document.getElementById("btn");
+        let prt = document.getElementById("main");
+        btn.addEventListener('click', function () {        
+            let child = prt.style.backgroundColor = "yellow";
+        })
+        btn.addEventListener('mouseover', function () {      
+            let child = prt.style.backgroundColor = "green";
+        })
+        btn.addEventListener('mouseout', function () {
+            let child = prt.style.backgroundColor = "pink";
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DATE OBJECT</h1>
+    <script>
+        // AA LKHVATHI APRA COMPUTER MA J DATE HSE TE AVSE
+        // ====== TYPE 1 =========
+        let x = new Date();
+        console.log(x);
+        // output : Mon Mar 27 2023 11:27:55 GMT+0530 (India Standard Time)
+
+        // ====== TYPE 2 ======
+        // AMA 7 PARAMETER PASS KARVANA (YEAR,MONTH,DATE,HOURS,MINUTES.SECOND,MILISECONDS)
+        // MONTH A 0 INDEX THI START THSE JEM K 0 = JANUARY , 1 = FEBUARY
+        let y = new Date (2018, 9, 12, 7, 20, 55, 60);
+        console.log(y);
+        // output : Fri Oct 12 2018 07:20:55 GMT+0530 (India Standard Time)
+
+        // let y = new Date (2018, 9, 12, 7);
+        //JETLA PARAMETER JOITA HOI ATLA J NAKHI SAKAY BAKI NA NAI NAKHVANA BUT YEAR AND MOTNTH AA PARAMETER TO REHVA J DEVANA NAHI TO OUTPUT SARKHU AVSE NAHO
+        // OUTPUT : Fri Oct 12 2018 07:00:00 GMT+0530 (India Standard Time)
+
+        // let y = new Date (2018);
+        // OUTPUT : Thu Jan 01 1970 05:30:02 GMT+0530 (India Standard Time) \\ AA RITE ANS SARKHO AVSE NAI
+
+        // ==== TYPE 3 ======
+        // AA RITE STRING MAA AA RITE PN LAKHI SAKAY
+        let z = new Date ("June 11 , 2017 11:45:55");
+        console.log(z);
+        // output : Sun Jun 11 2017 11:45:55 GMT+0530 (India Standard Time)
+
+
+        // 1 JAN, 1970 THI APRE NAKHELI DATE SUDHI NO TIME MILESECOND MA JOITO HOI TO GET TIME FUNCTION USE THY
+        let a = new Date("June 11 , 2017 11:45:55");
+        let b = a.getTime();
+        console.log(b);   // output : 1497161755000 // miliseconds ma ans avse
+
+        let sec = a. getSeconds();
+        console.log(sec); // output : 55
+
+        let hours = a.getHours();
+        console.log(hours);  // output : 11
+
+        let date = a.getDate();
+        console.log(date);  // output : 11
+
+        let month = a.getMonth();
+        console.log(month);  // output 5 means june month
+
+        let year = a.getFullYear();
+        console.log(year);  // output : 2017
+
+        let day = a.getDay();
+        console.log(day); // output : 0 means sunday
+
+        // JO KOI MA PN CHANGE KARVU HOI TO SET FUNCTION USE THY TENE CONSOLE.LOG MA LAKHVU NAI KARAN K AAPRE VALUE MA CHANGE KARVU CHE ATLE
+        let change = new Date("June 11 , 2017 11:45:55");
+        console.log(change);
+
+        // output : Sun Jun 11 2017 11:45:55 GMT+0530 (India Standard Time)
+        change.setFullYear(2020);   // 2017 ni jagya a 2020 thai jse
+        change.setDate(22);
+        change.setHours(7);
+        change.setMinutes(7);
+        change.setMonth(11);
+        console.log(change);
+        // output : Tue Dec 22 2020 07:07:55 GMT+0530 (India Standard Time)
+
+        // APRNE J DATE MALI HOI TENA 50 DIVS P6I NI DATE JOVA MATE
+        let od = new Date("October 13, 2018 11:15:33");
+        console.log(od);
+        // output : Sat Oct 13 2018 11:15:33 GMT+0530 (India Standard Time)
+
+        od.setDate(od.getDate() + 50);
+        console.log(od);
+        // output :  Sun Dec 02 2018 11:15:33 GMT+0530 (India Standard Time)
+ 
+        // SAME TASK 6 UPR JEVO BSS BNNE ALAG VARIABLE MA LAI COMPARE KRYA 6
+        let nd = new Date("October 13, 2018 11:15:33");
+        console.log(nd); 
+        // output : Sat Oct 13 2018 11:15:33 GMT+0530 (India Standard Time)
+
+        let nd1 = new Date("October 13, 2018 11:15:33");
+        nd1.setDate(nd.getDate() + 50);
+        console.log(nd1); 
+        // output :  Sun Dec 02 2018 11:15:33 GMT+0530 (India Standard Time)
+
+        // DATE NE COMPARE KARVA MATE
+        let com = new Date("July 12, 1997 8:25:54");
+        let com1 = new Date();
+
+        if(com1 > com){
+            console.log("com is past date");
+        }
+        else if(com > com1){
+            console.log("com is future date");
+        }
+        else{
+            console.log("com is same date");
+        }
+
+        let cd = new Date();
+        let bd = new Date("July 12 , 1997");
+        console.log(cd);
+        console.log(bd);
+        let cd1 = Math.trunc(cd.getTime()/(1000*3600*24));
+        console.log(cd1); // output : 19445
+
+        let bd1 = Math.trunc(bd.getTime()/(1000*3600*24));
+        console.log(bd1);  // output : 10053
+
+        let day1 = cd1 - bd1;
+        console.log(day1); // output : 9392
+        // MARI BIRTH DATE THI 29 MARCH 2023 SUDHI NA DAY 9393 CHE
+       
+       
+
+        
+       
+      
+
+
+      
+
+       
+        
+
+
+    </script>
+</body>
+</html>

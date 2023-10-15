@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const student = {
+            name: "Pratik Chasiya",
+            age: 26,
+            height: 5.7,
+            address: {
+                state: "gujarat",
+                city: "surat",
+                area: "Lal Darwaja",
+                pincode: 395003
+            }
+        };
+
+        // AA RITE KOI PN PROPERTY NE EK VALUE AAPI A RITE PN CONSOLE KARI SAKAY JEM K HEIGHT MA H LAKHI NE HEIGHT MLI JAY
+        const {name : p, height:h} = student;
+        console.log(p);
+        console.log(h);
+
+        const {name : j, age, address:{state:s, city}} = student;
+        console.log(j); // Pratik Chasiya
+        console.log(age); // 26
+        console.log(s); // gujarat
+    </script>
+</body>
+</html>

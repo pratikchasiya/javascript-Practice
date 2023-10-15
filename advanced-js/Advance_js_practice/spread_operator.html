@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+       // SPREAD OPERATOR THI APRE GME TYA ADD KARI SAKAY ARRAY NE ... NE SPREAD OPERATOR KEHVAY
+           let arr1 = [1, 2, 3];
+           let arr2 = [4, 5, 6, ...arr1];
+           let arr3 = [...arr1, 4, 5, 6];
+           let arr4 = [4, ...arr1, 5, 6];
+           let arr5 = [...arr1, ...arr2];
+
+           console.log(arr1); //  [1, 2, 3]
+           console.log(arr2); // [4, 5, 6, 1, 2, 3]
+           console.log(arr3); //  [1, 2, 3, 4, 5, 6]
+           console.log(arr4); // [4, 1, 2, 3, 5, 6]
+           console.log(arr5); // [1, 2, 3, 4, 5, 6, 1, 2, 3]
+
+
+        sum = (x, y, z) => {
+            return x + y + z;
+        }
+        const num = [1, 2, 3];
+        console.log(sum(...num)); // 6
+
+        add = (...args)=>{
+            let total = 0;
+            for(let x of args){
+                total += x;
+            }
+            return total;
+        }
+        const number = [1,2,3];
+        console.log(add(10, ...number)); // 16
+    </script>
+</body>
+
+</html>

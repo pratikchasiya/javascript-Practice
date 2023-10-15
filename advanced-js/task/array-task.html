@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = ['undefined', null, 98, -4, 'oscar', 0, 5.01, undefined, { firstName: 'John', lastName: 'Wick',age:65 }, true];
+        console.log(arr);
+
+        let a = arr.filter(x => typeof x === "number");
+        // console.log(a);
+
+        let obj = arr.filter(x => typeof x === "object" && x != null);
+        // console.log(obj[0]);
+        let b = Object.keys(obj[0]).filter(x => typeof obj[0][x] === "number").map(x => obj[0][x]);
+        // console.log(b);
+
+        let result = a.concat(b).reduce((sum, x) => sum+=x);
+        console.log(result);
+
+        // let r1 = arr.filter((x => typeof x === "number") || y => (Object.keys(typeof x === "object" && x != null)[0]));
+        // console.log(r1);
+    </script>
+</body>
+</html>

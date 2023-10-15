@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #main {
+            width: 500px;
+            margin: 150px auto;
+            /* border: 1px solid black; */
+            text-align: center;
+        }
+
+        #frm {
+            border: 10px solid dodgerblue;
+            padding: 80px;
+        }
+
+        .input {
+            padding: 10px 30px;
+        }
+
+        #sub {
+            padding: 10px 92px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <form id="frm">
+            <input type="text" placeholder="Enter your name" id="user" class="input"><br><br>
+            <p id="para1"></p>
+            <input type="password" placeholder="Enter your password" id="pass" class="input"><br><br>
+            <p id="para2"></p>
+            <input type="submit" id="sub">
+        </form>
+    </div>
+    <script>
+        let form = document.getElementById("frm");
+        form.addEventListener('submit',function(e){
+            let user = document.getElementById("user");
+            let para1 = document.getElementById("para1");
+            let val1 = user.value;
+            if(val1.length == 0){
+             para1.innerHTML = "Please enter user name";
+             e.preventDefault();
+            }
+            else if(val1.length < 8){
+                para1.innerHTML = "Please min 8 character";
+                e.preventDefault();
+            }
+            else{
+                p.innerHTML = "";
+            }
+
+            let pass = document.getElementById("pass");
+            let para2 = document.getElementById("para2");
+            let val2 = pass.value;
+            if(val2.length == 0){
+                para2.innerHTML = "Please enter pass";
+                e.preventDefault();
+            }
+            else if(val2.length < 8){
+                para2.innerHTML = "please enter min 10 char";
+                e.preventDefault();
+            }
+            else{
+                para2.innerHTML = "";
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>THIS IN OBJECT</h1>
+    <script>
+        let person = {
+            firstName : "Pratik",
+            lastName : "Chasiya",
+            age : 25,
+
+            sayHello(){
+                // console.log(`My name is ${person.firstName} ${person.lastName}. I have a ${car.color} ${car.brand} car.`)
+                console.log(`My name is ${this.firstName} ${this.lastName}. I have a ${car.color} ${car.brand} car.`)
+                // AHIYA OBJECT NA NAME NI JAGYA THIS LAKHI NE PN SAME OUTPUT LAVI SAKAY 
+                // EK OBJECT NI UNDER BIJA OBJECT NI PROPERTY USE KARI SAKAY POTANA OBJECT NI PROPERTY USE KARTA HOI TYRE OBJECT NI JAGYA THIS USE KARI SAKAY
+               
+            }
+        };
+
+        let car = {
+            brand : "BMW",
+            color : "black"
+        };
+        person.sayHello();
+        console.log(person);
+    </script>
+</body>
+</html>

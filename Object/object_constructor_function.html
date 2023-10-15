@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>OBJECT CONSTRUCTOR FUNCTION</h1>
+    <script>
+        // JYRE BADHA OBJECT NI KEY SAME HOI AND ANI VALUE ALAG HOI TYRE OBJECT CONSTRUCTOR FUNCTION USE THY 
+        // CONSTRUCTOR FUNCTION NU NAME BANE TYA SUDHI FIRST LETTER CAPITAL RAKHVO NAI RAKHSU TO KOI ERROR TO NAI AVSE BUT SARI HABIT MATE CAPITAL RAKHVO FIRST LETTER
+        function Student(fn, ln, age, id) {
+            this.firstName = fn;
+            this.lastName = ln;
+            this.age = age;
+            this.id = id;
+            this.mob = 8154944090;  // AA RITE UNDER THI PN PROPERTY ADD KARI SAKAY J ADD KRVU HOI ANU NAME AND ANI BAJU MA ANI VALUE LAKHVANU AHI PARAMETER NAI LAKHVANU DIRECT VALUE LAKHVU N AA BDHA OBJECT MA ADD THAI JSE
+            this.show = function(){
+                return this.firstName + " " +this.lastName;
+            }
+        }
+
+      
+        var Student1 = new Student("Pratik", "Chasiya", 25, 12);
+        console.log(Student1);
+        // output : Student {firstName: 'Pratik', lastName: 'Chasiya', age: 25, id: 12}
+
+        // KOI PN NEW OBJECT HOI ANE AA RITE BAHAR THI ADD KARI SAKAY
+        var Student2 = new Student("Mehul", "Waghela", 26, 9);
+        console.log(Student2);
+        // output : Student {firstName: 'Mehul', lastName: 'Waghela', age: 26, id: 9}
+        console.log(Student2.show()); // output : Mehul Waghela
+
+        var Student3 = new Student("Darshan","Patel",24,7);
+        console.log(Student3);
+        // output : Student {firstName: 'Darshan', lastName: 'Patel', age: 24, id: 7}
+
+        // AA RITE KOI PN OBJECT NI 2 PROPERTY NE JOINT KARI SAKAY
+        Student1.name = function () {
+            return this.firstName + " " + this.lastName;
+        }
+        console.log(Student1.name());
+    // output : Pratik Chasiya
+
+    // PERTICULAR EK PROPERTY NI VALUE JOITI HOI TO 
+    console.log(Student1.firstName);  // output : Pratik
+    </script>
+</body>
+
+</html>

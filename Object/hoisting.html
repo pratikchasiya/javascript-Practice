@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HOISTING</h1>
+    <script>
+        // use strict == no use aa javascript na rules ne compulsory follow karave a follow ni thse to error avse
+
+        // HOISTING MA ONLY VAR J USE THY LET NO USE NI THY
+        // NOTE : LET AND CONST MA HOISTING THAY CHE BUT X NI VALUE NAI MALE TO TENE UNDEFINED LETA NATHI TETHI ERROR AVSE
+        // HOISTING ONLY J DECLARATION PART HSE AU J THSE
+
+        // DECLERATION PART HELLO() NI UPR CHE ATLE OUTPUT AVE CHE
+        
+        function hello(){
+            console.log("Hello world");
+        }
+        hello();
+        // output : Hello world
+
+
+        //JO DECLERATION PART NICHE HOI TO BIJI KOI PROGRAMMING LANGUAGE MA ERROR AVE.JYRE JAVASCRIPT PEHLA BDHA VARIABLE AND FUNCTION NA DECLERATION PART NE READ KARI LESE MATE ERROR NAI AAVE TENE J HOISTING KEHVAY.
+        
+        hello();
+        function hello(){
+            console.log("Hello world");
+        }
+        // output : Hello world
+
+        // AHI VAR X MA KOI VALLUE NTHI TO UNDEFINED AVSE OUTPUT VALUE APELI N HOI TO HOISTING NAI THY ONLY VALUE APELI HOI TO HOISTING THY
+         var x;  // decleration part
+         console.log(x);
+         x =7;  // output :undefined
+
+         // ONLY DECLERATION PART NE J HOISTING READ KARE CHE
+         console.log(y);  // output : undefined
+         var y;
+         x = 7;
+
+         console.log(z); // output : undefined
+         var z = 7;
+
+         // DECLERATION PART JATE J LAI LESE JEM K VAR A JATE J LAI LESE
+          a = 4;
+          console.log(a);  // output 4
+
+            "use strict"
+            // JO STRICT MODE JAVASCRIPT MA APELO HOI TO DECLERATION PART NE JATE LESE NAI ANE ERROR AVSE
+            b = 4;
+            console.log(b);  // output : 4
+
+    </script>
+</body>
+</html>

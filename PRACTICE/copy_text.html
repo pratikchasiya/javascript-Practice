@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #main{
+            padding: 80px 100px;
+            border: 1px solid black;
+            margin: 100px auto;
+            text-align: center;
+        }
+        .inp{
+            padding: 10px;
+            margin: 0 20px;
+        }
+        #rightarrow{
+            position: absolute;
+            top: 240px;
+            left: 670px;
+            font-size: 30px;
+        }
+        #leftarrow{
+            position: absolute;
+            top: 240px;
+            left: 670px;
+            font-size: 30px;
+            display: none;
+            
+        }
+        h1{
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Copy text</h1>
+        <input type="text" class="inp" id="inp1">
+        <span id="rightarrow"><i class="fa-solid fa-arrow-right"></i></span>
+        <span id="leftarrow"><i class="fa-solid fa-arrow-left"></i></span>
+        <input type="text" class="inp" id="inp2">
+    </div>
+    <script>
+        let rightarrow = document.getElementById("rightarrow");
+        let leftarrow = document.getElementById("leftarrow");
+        let inp1 = document.getElementById("inp1");
+        let inp2 = document.getElementById("inp2");
+        rightarrow.addEventListener('click',function(){
+            inp2.value = inp1.value;
+            inp1 = "";
+            leftarrow.style.display = "block";
+            rightarrow.style.display = "none";
+        })
+    </script>
+</body>
+</html>

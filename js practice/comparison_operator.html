@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        COMPARISON OPERATOR
+    </div>
+    <script>
+        /*  1.EQUAL TO == */
+        let a = 5, b = 5;
+        console.log(a == b); /* true */
+
+        let c = 6, d = 5;
+        console.log(c == d);  /* false */
+
+        /* first variable no ma hse n 2nd variavle string ma hse to 2nd variable num ma convert thai jse */
+        let e = 5, f = '5';  /* true */
+        console.log(e == f);
+
+        /* 2. EQUAL VALUE AND EQUAL TYPE === */
+        let g = 5, h = 5;
+        console.log(g === h); /* true */
+
+        let i = 6, j = 5;
+        console.log(i === j); /* false */
+
+        /* ama banne value pn match krse ane bnne na data type pn match krse jo bnne match thse toj true thse */
+        // let k = 5, l = '5';
+        //    console.log(k===l); /* false */
+
+        /* ama banne value pn match krse ane bnne na data type pn match krse jo bnne match thse toj true thse */
+        let k = '5', l = '5';
+        console.log(k === l); /* true */
+
+        /* 3. NOT EQUAL!= */
+        
+        console.log(6 != 5);  /* true */
+        console.log(5 != 5);  /* false */
+        console.log(5 != '5'); /* false */
+
+        /* 4. NOT EQUAL VALUE OR NOT EQUAL TYPE !== */
+        console.log(6 !== 5); /* true */
+        console.log(5 !== 5); /* false */
+        console.log(5 !== '5'); /* true */
+
+        /* 5.GREATER THAN > */
+        console.log(6>5); /* true */
+        console.log(6 >'5'); /* true */
+        console.log('6' > '5'); /* true */
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .sec {
+            width: 600px;
+            height: 150px;
+            /* background-color: aqua; */
+            border: 1px solid black;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+        }
+
+        .btn1 {
+            padding: 10px 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="sec1">
+            <div class="sec" id="part1"></div>
+            <div class="sec" id="part2"></div>
+        </div>
+        <div class="btn">
+            <button class="btn1" onclick="show('pink','skyblue')">btn1</button>
+            <button class="btn1" onclick="show('yellow','green')">btn2</button>
+            <button class="btn1" onclick="show('red','blue')">btn3</button>
+            <button class="btn1" onclick="show('indianred','grey')">btn4</button>
+        </div>
+    </div>
+    <script>
+        let part1 = document.getElementById("part1");
+        let part2 = document.getElementById("part2");
+        let btn = document.getElementsByClassName("btn1");
+        function show(a,b){
+            part1.style.backgroundColor = a;
+            part2.style.backgroundColor = b;
+        }
+
+    </script>
+</body>
+
+</html>

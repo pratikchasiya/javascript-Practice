@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="frm">
+        Username :
+        <input type="text" id="user">
+        <p id="para"></p>
+        <input type="submit">
+    </form>
+    <script>
+        // HTML NA NATURAL BEHAVIOUR NE ROKVA MATE NI METHOD NE PREVENT DEFAULT METHOD KEHVAY
+        // PREVENT DEFAULT A EK METHOD CHE
+        // SUBMIT EVENT ONLY FORM NE J APAY BUTTON NE NAI APVANI
+        // AND FUNCTION MA EK PARAMETER PASS KARVANO HOI
+        // PREVENT DEFAULT METHOD FORM NE DIRECT SUBMIT THTU ROKE CHE AMUK J CONDITION HOI A PURI THAY P6I J FORM NE SUBMIT THAVA DEY 6
+        let form = document.getElementById("frm");
+        form.addEventListener('submit',function(e){
+            let user = document.getElementById("user");
+            let para = document.getElementById("para");
+            let val = user.value;
+            if(val.length == 0){
+                para.innerHTML = "Please Enter Username";  // INPUT MA KAI NI LAKHSU TO AVU LAKHAI NE AVSE
+                e.preventDefault();
+            }
+            else if(val.length < 8){
+                para.innerHTML = "Please Enter Minimum 8 Character"; // 8 KARTA O6A CHARACTER LAKHSU TO AVU AVSE
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

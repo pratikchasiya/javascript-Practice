@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .cls{
+            background-color: aqua;
+            color: red;
+        }
+        .dim{
+            border: 1px solid black;
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="cls">
+        <h1>TOGGLE</h1>
+    </div>
+    <script>
+        // TOGGLE MEANS J APRE TOGGLE MA TO J CLASS LAGELO HSE TE REMOVE THAI JSE ANS J CLASS NAI LAGELO HSE TE ADD THAI JSE
+        // TOGGLE ONLY CLASS NU J THY
+        let prt = document.getElementById("box");
+        let res = prt.classList.toggle("dim"); // AHI DIM NAME CLASS NTHI TO A ADD THAI JSE 
+        console.log(res);
+    </script>
+</body>
+</html>

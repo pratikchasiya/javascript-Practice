@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <h1>ARRAY</h1>
+    </div>
+    <script>
+        // =============== Array defines ======================
+        let arr = [15, 25, 'Pratik', true, false, 0, 1, "", " ", undefined, NaN, 'Mehul'];
+        console.log(arr);
+
+        // ========== TRUTHY AND FALSY ELEMENT =========
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i]) {
+                console.log("Truthy element", arr[i]);
+                //output = Truthy element == 15,25,'Pratik',true,1," ",'Mehul'
+            }
+            else {
+                console.log("Falsy element", arr[i]);
+                //output = Falsy element == false,0,"",undefined,NaN
+            }
+        }
+
+
+
+        // ====== NORMAL FOR LOOP - PRINT ALL ELEMENT ======
+        let book = ["Maths", "Reasoning", "English", "Physics"];
+        console.log(book);
+        for (let i = 0; i < book.length; i++) {
+            console.log(book[i]);
+        }
+
+        // ========= FOR OF LOOP - PRINT ALL ELEMENT ==========
+        for (let x of book) {
+            console.log(x);
+        }
+
+        //   ======== PARTICULAR VALUE JOITI HOI TO ======
+        console.log(book[2]); /* output English */
+
+        // ========= ARRAY NI KOI VALUE CHANGE KARVI HOI TO ====
+        book[3] = "Science";   /* Physics ni jagya a Science avi jse ==== */
+        console.log(book[3])  /* output Science */
+        console.log(book);  /* output (4) ['Maths', 'Reasoning', 'English', 'Science'] */
+
+
+        // ========= OPERATION ON ARRAY ==============
+
+        // ========ARRAY LENGTH===============
+        console.log(arr.length); /* output 12 */
+
+        // ========= PUSH == PA6AR NI SIDE EK ELEMENT ADD THSE =======
+        book.push("Hindi");
+        console.log(book);  /* output (5) ['Maths', 'Reasoning', 'English', 'Science', 'Hindi'] */
+
+        // ======= FOR LOOP IN PUSH ===
+        let bookfor = ["Maths", "Reasoning", "English", "Physics"];
+        let bookfor1 = ["Hindi"];
+        for (let i = 0; i < bookfor.length; i++) {
+            bookfor1.push(bookfor[i]);
+        }
+        console.log(bookfor1);  /* output (5) ['Hindi', 'Maths', 'Reasoning', 'English', 'Physics'] */
+
+        // ========== UNSHIFT == AGAR NI SIDE ELEMENT ADD KARVA MATE ==========
+        book.unshift("Computer");
+        console.log(book);  /* output(6) ['Computer', 'Maths', 'Reasoning', 'English', 'Science', 'Hindi'] */
+
+        // ========== POP == LAST MATHI ELEMENT DUR KARVA MATE ====
+        book.pop();
+        console.log(book);  /* output (5) ['Computer', 'Maths', 'Reasoning', 'English', 'Science'] */
+
+        // ========= SHIFT == AGAR THI ELEMENT DUR KARVA MATE ========
+        book.shift();
+        console.log(book); /* output (4) ['Maths', 'Reasoning', 'English', 'Science'] */
+
+        //  ============ SPLICE == VACCHE THI KOI ELEMENT NE DUR KARVU HOI TO ====
+        book.splice(1, 2);  /* 1 MEANS KAI POSITION THI ANS 2 MEANS KETLA ELEMENT DUR KARVA CHE */
+        console.log(book);  /* output (2) ['Maths', 'Science'] */
+
+        // ======== SPLICE =====
+        book.splice(1);  /* PEHLI INDEX THI PA6AR NA BADHA ELEMENT DUR THAI JSE */
+        console.log(book); /* output ['Maths'] */
+
+        // ======== ARRAY NE EMPTY KARVA MATE ====
+        // ====== 1st METHOD ====
+        // book = [];
+        // console.log(book);  /* output [] */
+
+        // === 2nd METHOD ====
+        book.length = 0;
+        console.log(book);  /* output [] */
+
+        //    ========= INDEXOF == KOI ELEMENT NI POSITION NAKKI KARVA MATE =====
+
+        let book1 = ["Maths", "Reasoning", "English", "Physics"];
+        let pos = book1.indexOf("Reasoning");
+        console.log(pos);  /* output 1 */
+
+        // ===== CHECK VARIABLE OR ARRAY ======
+        let book2 = ["Maths", "Reasoning", "English", "Physics"];
+        let book3 = "Hindi";
+        console.log(Array.isArray(book2));  /* output true  array che */
+        console.log(Array.isArray(book3));  /* output false  array nathi */
+
+        // ============ STRING CONVERTED IN ARRAY ========
+        let text = "Pratik Natvarbhai Chasiya";
+        // let wordarray = text.split("a");  /* output ['Pr', 'tik N', 'tv', 'rbh', 'i Ch', 'siy', '']  a dur thai jse ane baki na ne array ma convert krse */
+        // let wordarray = text.split(""); /* output ['P', 'r', 'a', 't', 'i', 'k', ' ', 'N', 'a', 't', 'v', 'a', 'r', 'b', 'h', 'a', 'i', ' ', 'C', 'h', 'a', 's', 'i', 'y', 'a'] */
+        let wordarray = text.split(" ");
+        console.log(wordarray);  /* output ['Pratik', 'Natvarbhai', 'Chasiya'] */
+
+
+        // ============ ARRAY CONVERTED IN STRING ========
+        let books = ["maths", "english", "reasoning"];
+        // let textarray = books.join("-");  /* output maths-english-reasoning */
+        let textarray = books.join(" ");
+        console.log(textarray); /* output  maths english reasoning */
+
+        //    ========= ARRAY JOINT =========
+        let arr1 = ["maths", "reasoning", "science"];
+        let arr2 = ["english", "gujarati"];
+        let arr3 = ["bio", "chem"];
+        // let newarr = arr1.concat(arr2); /* output ['maths', 'reasoning', 'science', 'english', 'gujarati'] */
+        let newarr = arr1.concat(arr2, arr3); /* output ['maths', 'reasoning', 'science', 'english', 'gujarati', 'bio', 'chem'] */
+        console.log(newarr);
+
+        // ====== SPREAD OPERATOR METHOD TO JOINT ARRAY ADVANCE JAVASCRIPT ========
+        let newarr1 = [...arr1, ...arr2, ...arr3];  /* ... means spread operator */
+        console.log(newarr1);
+
+        // ========= MULTI DIMENSIONAL ARRAY =======
+        let bookwithpages = [["maths", 300], ["reasoning", 400], ["english", 500]];
+        // let multi = bookwithpages[1];  /* output ['reasoning', 400] */
+        let multi = bookwithpages[1][0];  /* output reasoning */
+        console.log(multi);
+
+        // ===== ELEMENT NE NAME AND POSITION APVA MATE ====
+        let bookname = ["maths", "reasoning", "english"];
+        for (let i = 0; i < bookname.length; i++) {
+            console.log(`Element ${i + 1} = ${bookname[i]}`);
+            /* output Element 1 = maths
+                      Element 2 = reasoning
+                      Element 3 = english */
+        }
+
+
+        // ============ OTHERS METHOD ============
+
+        // ============  ARRAY REVERSE() ============
+        let num = [1, 2, 3, 4, 5];
+        let reversearray = num.reverse();
+        console.log(reversearray); /* output [5, 4, 3, 2, 1] */
+
+        // ======= ARRAY SORT() ==========
+        // ========== SORT A ACENDING ORDER MA GOTHAVSE ARRAY NE =======
+        let sort1 = ["Pratik", "Mehul", "Dhaval", "Karan"];
+        let sort2 = sort1.sort();
+        console.log(sort2); /* output ['Karan', 'Mehul', 'Pratik'] */
+
+        // ======= DESENDING ORDER MA GOTHVAVA MATE ARRAY NE REVERSE KRVU PDE =====
+        let sort3 = sort1.reverse();
+        console.log(sort3);  /* output ['Pratik', 'Mehul', 'Karan', 'Dhaval'] */
+
+        // ====== ARRAY FILL() FILL MA J LAKSU AJ BADHE FILL THAI JSE =========
+        let fill1 = ["Pratik", "Mehul", "Dhaval", "Karan"];
+        let fill2 = fill1.fill("Apple");
+        console.log(fill2);  /* output ['Apple', 'Apple', 'Apple', 'Apple'] */
+
+        // ======= ARRAY TO STRING() ========
+        // ===== AMA SAME TO SAME PRINT THSE COMMA HSE TO A PN AAVSE =====
+
+        let items = ["JavaScript", 1, "a", 3];
+        let itemsString = items.toString();
+        console.log(itemsString);  /* output JavaScript,1,a,3 */
+
+
+        // ========= SPLICE() method returns an array by changing (adding/removing) its elements in place.======
+        // replace 1 element from index 2 by 13
+        let prime_numbers = [2, 3, 5, 7, 9, 11];
+        // AHI 2 MEANS 2 NUM NO INDEX P6I 2 ELEMENT CUT KRVANA AND 13 MEANS 2 NUM NA INDEX MA J CHE ANI JAGYA 13 THAI JSE ====
+        let removedElement = prime_numbers.splice(2, 2, 13);
+        console.log(removedElement);  /* output [5,7] */
+        console.log(prime_numbers);  /* output  [2, 3, 13, 9, 11] */
+
+        // ===== ARRAY() OF METHOD METHOD CREATES A NEW ARRAY INSTANCE FROM THE GIVEN ARGUMENTS ========
+
+        let alphabets = Array.of("APPLE", "BAT", "CAT");
+        console.log(alphabets);  // Output: [ 'APPLE', 'BAT', 'CAT' ]
+
+
+        // ===========  ARRAY SLICE() ANO USE APRA JYATHI INDEX NUM APSU AND KYA SUDHU JOI A 6 TE INDEC NUM APSU A COPY KRSE ===
+        let number = [2, 5, 7, 9, 11];
+        let number1 = number.slice(1, 4);
+        console.log(number1);  /* output [5, 7, 9] */
+
+        // ===== ARRAY INCLUDES() METHOD CHECKS IF AN ARRAY CONTAIN A SPECIFIED ELEMENT OR NOT =========
+
+        let languages = ["JavaScript", "Java", "C"];
+        let check = languages.includes("Java");
+        console.log(check);  /* output true */
+        let check1 = languages.includes("HTML");
+        console.log(check1);  /* output false */
+
+        // ====== ARRAY ENTRIES() METHOD RETURN A NEW ARRAY ITERATOR OBJECT CONTAINING KEY/VALUE PAIRS FOR EACH ARRAY INDEX ====
+        let alphabets1 = ["A", "B", "C", "D"];
+        let iterator = alphabets1.entries();
+
+        // ===== FOR OF LOOP ====
+        for (let entry of iterator) {
+            console.log(entry); 
+//             output [0, 'A']
+//                    [1, 'B']
+//                    [2, 'C'] 
+//                    [3, 'D']       
+        }
+
+        // ========== ARRAY KEYS()  AMA INDEX NUM APSE BDHI ARRAY NI =====
+        let alphabets2 = ["A", "B", "C", "D"];
+        let iterator1 = alphabets2.keys();
+
+        // ===== FOR OF LOOP ====
+        for (let keys of iterator1) {
+            console.log(keys);  /* outpur 0 1 2 3  INDEX NUM AAPSE A B C D NA*/
+        }
+
+        // ======= ARRAY VALUES() AMA VALUE AAPSE ARRAY NI  ====
+        let languages1 = ["JavaScript", "Java", "C++"];
+        let languages2 = languages1.values();
+        for(let values of languages2){
+            console.log(values);  /* output JavaScript Java C++ */
+        }
+
+        // ==== ARRAY.FROM() NEW ARRAY CREAT KRVA MATE AND STRING NE ARRAY MA CONVERT KARE ===
+        let array = Array.from("abc");
+        console.log(array);  /* output  ['a', 'b', 'c'] */
+
+        // ====== ARRAY COPY WITHIN() COPIES ARRAY ELEMENTS FROM ONE POSITION TO ANOTHER IN THE GIVEN ARRAY ===
+            let words = ["apple", "bat", "cat", "dog"];
+            // words.copyWithin(3,0); /* output ['apple', 'bat', 'cat', 'apple'] */
+
+            words.copyWithin(3,1);
+            console.log(words);  /* output  ['apple', 'bat', 'cat', 'bat'] */
+
+
+            // ======== ARRAY.TO LOCALE STRING() RETURN A STRING REPRESENTING THE ELEMENTS OF THE ARRAY IN A PERTICULAR LOCALE ===
+            let array1 = ["Nepal", "India", 10];
+            let array2 = array1.toLocaleString();
+            console.log(array2);  /* output Nepal,India,10 */
+
+            // ===== ARRAY FLAT() NESTED ARRAY NE REDUCE KARVA USE THAY =========
+            let numbers = [1, 2, [3, 4, [5, 6, [7, 8]]]];
+            let flat1 = numbers.flat(2);  /* 2 means 4 nested array ni jagya 2 thai jse */
+            console.log(flat1); /* output [ 1, 2, 3, 4, 5, 6, [ 7, 8 ] ] */
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

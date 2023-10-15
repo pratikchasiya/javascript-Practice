@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const student = ["Pratik Chasiya", 26, 5.7, ["Surat", 394540]];
+
+        let name = student[0];
+        let height = student[2];
+        let pin = student[3][1];
+        console.log(name); // Pratik Chasiya
+        console.log(height); // 5.7
+        console.log(pin); // 394540
+
+        // DESTRUCTURING MA AA RITE VARIABLE MA STRORE KRI ONLY VARIABLE NU NAME LAKHI CONSOLE KARAVI SAKAY JYRE OBJECT METHOD MA APRE PEHLA OBJECT NU NAME LKHI P6I PROPERTY NU NAME LAKHVU PDE JYRE AMA KHALI EK VARIABLE NU NAME THI OUTPUT LAVI SAKAY
+        // J NAI JOITO HOI ANE AA RITE BLANK RAKHI SAKAY
+        const [name1, , height1, [city1, pin1]] = student;
+        console.log(name1); // Pratik Chasiya
+        console.log(height1); // 5.7
+        console.log(city1); // surat
+        console.log(pin1); //394540
+
+        calc = (a, b) => {
+            const addition = a+b;
+            const subtraction = a-b;
+            const multiplication = a*b;
+            const division = a/b;
+
+            return [addition, subtraction, multiplication, division];
+        }
+        console.log(calc(20, 10)); // [30, 10, 200, 2]
+        const [add, , multiply, ] = calc(20, 10);
+        console.log(add);
+        console.log(multiply);
+    </script>
+</body>
+</html>

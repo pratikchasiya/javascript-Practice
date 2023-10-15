@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">Google</button>
+    <button id="btn2">Yahoo</button>
+    <button id="btn3">Close</button>
+    <script>
+        let x;
+        let btn1 = document.getElementById("btn1");
+        btn1.addEventListener('click',function(){
+            window.open("https://www.google.com/","google","height = 500, width = 300")
+            // AHI 3 PARAMETER PASS KARVANA HOI 1ST URL 2ND KOI PN NAME API SAKAY 3RD MA FEATURES APVANA HOI
+            // BUTTON1 PR CLICK KRSU GOOGLE KHULSE
+        });
+
+        let btn2 = document.getElementById("btn2");
+        btn2.addEventListener('click',function(){
+           x = window.open("https://www.yahoo.com/","google","height = 500, width = 300");
+           // AHI VARIABLE NE GLOBALLY BAHAR DEFINE KARVU PDSE TO AHI X NE BAHAR DEFINE KARYU
+            // AHI BUTTON 2 PR CLICK KRSU TO YAHOO OPEN THSE PN AHI PARAMETER MA 1ST URL N SECOND PARAMETER MA APRE JENI JAGYA OPEN KARVU CHE TENU NAME LAKHVANU GOOGLE NI JAGYA A YAHOO OPEN THSE
+        })
+
+        let btn3 = document.getElementById("btn3");
+        btn3.addEventListener("click",function(){
+            x.close();
+            // AHI JENE CLOSE KARVU HOI ANE PEHLA VARIABLE MA ASSIGN KARVU PDE AND VARIABLE NE GLOBALLY DEFINE KARVANU P6I CLOSE VALA BUTTON NE EVENT API X.CLOSE () X MEANS J VARIABLE DEFINE KARYU TE CHE 
+            
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>REPLACE ELEMENT</h1>
+    <ul id="ul">
+        <li>List-1</li>
+        <li>List-2</li>
+        <li>List-3</li>
+        <li>List-4</li>
+    </ul>
+    <script>
+        // REPLACE THI APRE KOI ELEMENT NE REPLACE KARVU HOI TO KARI SAKAY
+        let prt = document.getElementById("ul");
+        let list = document.createElement("li");
+        list.textContent = "Hello";
+        prt.appendChild(list);
+        let replace = prt.firstElementChild.nextElementSibling;
+        prt.replaceChild(list, replace);
+        // PEHLA APRE PARENTS NE PAKDVU PDE P6I EK ELEMENT CREAT KRI ANE PARENTS MA APPEND KARAVI P6I APRE JENE REPLACE KARVU CHE ANE PAKDVANU
+        // PARAMETER MA 1ST PARAMETER MA J REPLACE KARVANU 6 ANI JAGYA A SU LAKHVANU 6 TE LAKHVU AND 2ND PARAMETER MA KOI JAGYA A REPLACE KARVANU 6 A LAKHAVANU
+
+    </script>
+</body>
+
+</html>

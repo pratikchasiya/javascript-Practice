@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Example</title>
+    <style>
+        .block, input {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Student Form</legend>
+        <form id="frm_student" action="" method="post">
+            <div class="block">
+                <label for="student_name">Name:</label>
+                <input type="text" name="student_name" id="student_name">
+            </div>
+            <div class="block">
+                <label for="student_email">Email:</label>
+                <input type="email" name="student_email" id="student_email">
+            </div>
+            <div class="block">
+                <input type="submit" name="btn_submit" id="btn_submit" value="Add">
+            </div>
+        </form>
+    </fieldset>
+
+    <div id="student_data"></div>
+
+    <script>
+        let frm_student = document.getElementById("frm_student");
+        let student_data = document.getElementById("student_data");
+
+        frm_student.addEventListener("submit", function(e) {
+            // console.log("test");
+
+            
+            let student_name = document.getElementById("student_name").value;
+            let student_email = document.getElementById("student_email").value;
+
+            // let data = [];
+            // data.push(student_name);
+            // data.push(student_email);
+            // console.log(data);
+
+            const d = new Date();
+            student_id = d.getTime();
+            localStorage.setItem("student_id", student_id);
+            localStorage.setItem("student_name", student_name);
+            localStorage.setItem("student_email", student_email);
+
+            console.log(localStorage.getItem("student_id"));
+
+            // let tbl = "<table>" +
+            //         + "<thead><tr>" +
+            //         + "<th>Sr No.</th>" +
+            //         + "<th>Student Name</th>" +
+            //         + "<th>Student Email</th>" +
+            //         + "</tr></thead>" +
+            //         + "<tbody>" + student_list + "</tbody>" +
+            //         + "</table>";
+
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

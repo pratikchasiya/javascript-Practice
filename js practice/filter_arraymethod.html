@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FILTER ARRAY METHOD</h1>
+    <script>
+        //FILTER METHOD MA KOI OPERATION NAI KARI SAKAY
+        //FILTER MA APRE J CONDITION APSU A RETURN KRSE JEM K AMA 25 KRTA MOTO NUM RETURN KRSE
+        let x = [10, 20, 30, 40, 50];
+        let arr = x.filter((e) => {
+            if(e > 25){
+                return e;
+            }
+        });
+        console.log(arr);
+
+        //output: [30, 40, 50]
+
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+Show all the results in seperate table in the format of
+
+Key: Value
+
+1. Get all the Keys starting from 2 - Key
+2. Get all the Keys starting from 1 - Key
+let obj_res = Object.keys(data).filter(x => x.startsWith("1"));
+3. Get all numbers from the Object - Value
+4. Get all falsy values from Object - Value
+5. Get all string from Object - Value
+6. Get all LOW values from Object - Value
+7. Get all values which has space in it - Value
+
+
+
+Estimation: 2 Hrs

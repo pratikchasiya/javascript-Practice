@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #main {
+            border: 1px solid black;
+            padding: 30px 110px;
+            margin: 0 auto;
+            width: 800px;
+        }
+
+        .cls {
+            border: 1px solid black;
+            padding: 20px 20px;
+            position: relative;
+        }
+
+        .para {
+            text-align: justify;
+        }
+
+        .plus i {
+            position: absolute;
+            top: 25px;
+            right: 60px;
+        }
+
+        .minus i {
+            position: absolute;
+            top: 25px;
+            right: 60px;
+            /* display: none; */
+        }
+
+        .toggle {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="sec">
+            <div class="cls">
+                <h2>Section 1</h2>
+                <div class="plus"><i class="fa-solid fa-plus"></i></div>
+                <div class="minus toggle"><i class="fa-solid fa-minus"></i></div>
+            </div>
+            <div class="para toggle">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, a error, blanditiis doloribus
+                    excepturi suscipit deleniti, deserunt laudantium libero repellat saepe! Consequatur est pariatur
+                    aliquid modi magnam cumque iste, aliquam quidem praesentium neque, facere saepe quia consequuntur.
+                    Quis aliquid dolorum iure esse, labore ullam nemo sequi eos sed molestiae nam error laborum. Illo
+                    fuga ratione quidem quos sapiente voluptatem sunt, magnam maxime vel obcaecati laboriosam, aperiam
+                    iure sequi. </p>
+            </div>
+        </div>
+        <div class="sec">
+            <div class="cls">
+                <h2>Section 2</h2>
+                <div class="plus"><i class="fa-solid fa-plus"></i></div>
+                <div class="minus toggle"><i class="fa-solid fa-minus"></i></div>
+            </div>
+            <div class="para toggle">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, a error, blanditiis doloribus
+                    excepturi suscipit deleniti, deserunt laudantium libero repellat saepe! Consequatur est pariatur
+                    aliquid modi magnam cumque iste, aliquam quidem praesentium neque, facere saepe quia consequuntur.
+                    Quis aliquid dolorum iure esse, labore ullam nemo sequi eos sed molestiae nam error laborum. Illo
+                    fuga ratione quidem quos sapiente voluptatem sunt, magnam maxime vel obcaecati laboriosam, aperiam
+                    iure sequi.</p>
+            </div>
+        </div>
+        <div class="sec">
+            <div class="cls">
+                <h2>Section 3</h2>
+                <div class="plus"><i class="fa-solid fa-plus"></i></div>
+                <div class="minus toggle"><i class="fa-solid fa-minus"></i></div>
+            </div>
+            <div class="para toggle">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, a error, blanditiis doloribus
+                    excepturi suscipit deleniti, deserunt laudantium libero repellat saepe! Consequatur est pariatur
+                    aliquid modi magnam cumque iste, aliquam quidem praesentium neque, facere saepe quia consequuntur.
+                    Quis aliquid dolorum iure esse, labore ullam nemo sequi eos sed molestiae nam error laborum. Illo
+                    fuga ratione quidem quos sapiente voluptatem sunt, magnam maxime vel obcaecati laboriosam, aperiam
+                    iure sequi. </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let prt = document.getElementsByClassName("cls");
+        let sec = document.getElementsByClassName("sec");
+        let para = document.getElementsByClassName("para");
+        let p;
+        for (let i = 0; i < prt.length; i++) {
+            prt[i].addEventListener('click', function () {
+                for (let x of prt) {
+                    if (p != i) {
+                        if (x.lastElementChild.previousElementSibling.classList.contains("toggle"))
+                         {
+                            x.lastElementChild.previousElementSibling.classList.remove("toggle");
+                            x.nextElementSibling.classList.add("toggle");
+                            x.lastElementChild.classList.add("toggle");
+                        }
+
+                    }
+                }
+                prt[i].nextElementSibling.classList.toggle("toggle");
+                prt[i].lastElementChild.classList.toggle("toggle");
+                prt[i].lastElementChild.previousElementSibling.classList.toggle("toggle");
+                p = i;
+            })
+
+        }
+    </script>
+</body>
+
+</html>

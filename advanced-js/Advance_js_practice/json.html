@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JSON FORMAT</h2>
+    <script>
+        
+        // {
+        //     "employees": [
+        //         { "firstName": "John", "lastName": "Doe" },
+        //         { "firstName": "Anna", "lastName": "Smith" },
+        //         { "firstName": "Peter", "lastName": "Jones" }
+        //     ]
+        // }
+
+        let text = '{"employees":[' +
+            '{"firstName":"John","lastName":"Doe"},' +
+            '{"firstName":"Anna","lastName":"Smith"},' +
+            '{"firstName":"Peter","lastName":"Jones"}]}';
+        console.log(text);
+
+        // JYRE APRE KOI DATA BACKEND VALA PASE THI LEVANA HOI TO A DATA AS A STRING FORMAT MA HSE A APRE NAI SAMJI SAKIYE ATLE ANE PEHLA OBJECT FORM CONVERT KARVU PDE ANA MATE JSON.PARSE USE THY
+        let obj = JSON.parse(text); //string to object
+        console.log(obj);
+
+        // JYRE APRE APRA DATA BACKEND VALA NE APVANA HOI TO APRI PASE A DATA OBJECT FORM MA HOI TO A BACKEND VALA SAMJI NAI SAKE ATLE ANE APRE STRING FORMAT MA APVU PDE TO ANA MATE JSON STRINGIFY USE THY
+        let str = JSON.stringify(obj); //object to string
+        console.log(str);
+    </script>
+</body>
+</html>

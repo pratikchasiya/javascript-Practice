@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <h1>ARGUMENTS OBJECT</h1>
+    </div>
+    <script>
+        function sum() {
+            /* ARGUMENT IS ONE TYPE OF ARRAY */
+            console.log(arguments.length); /* output 2 | output 3 */
+            console.log(arguments);  /* output [5,7] | output [5,7,9] */
+            console.log(arguments[5]); /* undefined =========ani length krta vdhre lkhiye to undefined output ave */
+            console.log(arguments[1]); /* output 9 | output 6 */
+        }
+        sum(5, 9);  /* output 2 */
+        sum(5, 6, 9); /* output 3 */
+    </script>
+
+    <script>
+
+        function sum() {
+            if (arguments.length == 0) {
+                console.log("No arguments passed");
+            }
+            else {
+                let sum = 0;
+                for (let x of arguments) {
+                    sum = sum + x;
+                }
+                console.log(sum);
+            }
+        }
+        /* FUNCTION NE VARIABLE MA PN STORE KARAVI SAKAY ANE ANE PN USE KRI SAKAY HVE ADDITION NE PN FUNCTION NI RITE USE KARI SAKAY */
+        let addition = sum;
+        addition(9,9);
+        sum();  //no argument passed
+        sum(5);  //5
+        sum(5, 7);  //12
+        sum(5, 7, 9);  //21
+        sum(5, 9, 7, 4);  //25
+    </script>
+</body>
+
+</html>

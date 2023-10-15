@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 300px;
+            height: 200px;
+        }
+         .cls{
+            background-color: aqua;
+            color: red;
+        }
+        .cls1{
+            border: 1px solid black;
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="box" class="cls cls1">
+        <h1>WIDTH AND HEIGHT</h1>
+    </div>
+    <script>
+
+        // OFFSET = BORDER , PADDING INCLUDE THAY AND MARGIN INCLUDE NAI THAY
+        // CLIENT = PADDING INCLUDE THAY AND BORDER , MARGIN INCLUDE NAI THAY
+        let prt = document.getElementById("box");
+        let width = prt.offsetWidth;
+        let height = prt.offsetHeight;
+        console.log(width);  // output : 351
+        console.log(height);   // output : 251
+        let width1 = prt.clientWidth;
+        let height1 = prt.clientHeight;
+        console.log(width1);   // output : 350
+        console.log(height1);   // output : 250
+    </script>
+</body>
+</html>

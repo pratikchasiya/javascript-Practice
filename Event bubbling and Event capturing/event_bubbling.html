@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #body {
+            background-color: cyan;
+            padding: 50px;
+        }
+
+        #main {
+            background-color: darkgreen;
+            padding: 50px;
+        }
+
+        #btn {
+            padding: 10px 20px;
+            color: darkkhaki;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="body">
+        <div id="main">
+            <button id="btn">Click here</button>
+        </div>
+    </div>
+    <script>
+        // EVENT BUBBLING MA CHILD TO PARENTS THSE 
+        // BUTTON PR CLICK KARSU TO BUTTON , DIV , BODY 3 NE NI EVENT LAGSE
+        // DIV PR CLICK KRSU TO DIV AND BODY 2 EVENT LAGSE
+        // BODY PR CLICK KARSU TO BODY PR NI J EVENT LAGSE
+        let body1 = document.getElementById("body");
+        body1.addEventListener('click', body);
+        // body1.addEventListener('click',body, false); AHIYA 3 PARAMETER HOI PN EVENT BUBBLING MA BY DEFAULT FALSE VALU PARAMETER HOI J 6 ATLE LAKHVNI JARU NTHI 
+
+        let main = document.getElementById("main");
+        main.addEventListener('click', div);
+
+        let button = document.getElementById("btn");
+        button.addEventListener('click', btn);
+
+        function body() {
+            console.log("body clickedd");
+
+        }
+        function div() {
+            console.log("div clickedd");
+        }
+        function btn() {
+            console.log("button clickedd");
+        }
+
+    </script>
+</body>
+
+</html>

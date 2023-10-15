@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Time interval</h1> 
+   <button id="btn">Clear Interval</button>
+   <script>
+    // TIME INTERVAL MA APRE J TIME APSU TETLA TIME P6I A REPEAT THYA KRSE 
+    
+    setInterval(show,3000);
+    function show(){
+        console.log("Hello world"); // DAREK 3 SECOND A REPEAT THAY KRSE
+    }
+
+    // CLEAR TIME INTERVAL==== 
+    // PEHLA FUNCTION NE KOI VARIABLE MA STORE KRI EK BUTTON BANAVI ANA PR CLICK KARIYE TO A FUNCTION VARMVAR EXECUTE THAI JAVNU BANDH THAI JSE JYRE APRE TE BUTTON PR CLICK KRSU TYRE
+  let time = setInterval(show1,3000);
+    function show1(){
+        console.log("hello");
+    }
+    let btn1 = document.getElementById("btn");
+    btn1.addEventListener('click',function(){
+        clearInterval(time); // J VARIABLE MA STORE KRYU HOI ANE PASS KRVU CLEAR INTERVAL NA PARA METER MA
+    })
+    
+   </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            height: 200px;
+            width: 500px;
+            border: 1px solid black;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #btn {
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #ul{
+            border: 1px solid black;
+            height: 150px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="main">
+        <li>mouseover</li>
+        <li>mouseout</li>
+        <li>mousedown</li>
+        <li>mouseup</li>
+    </ul>
+    <button id="btn">Click me</button>
+
+    <ul id="ul">
+        <li>click</li>
+        <li>dblclick</li>
+        <li>contextmenu</li>
+        <li>mouseover</li>
+    </ul>
+    <button id="btn1">Click me</button>
+    <script>
+        let prt = document.getElementById("main");
+        let btn = document.getElementById("btn");
+        // MOUSEOVER THI APRE JENE EVENT API HOI ANA PR MOUSE LAI JSE ATLE EVENT LAGSE
+        btn.addEventListener('mouseover', function () {
+            prt.firstElementChild.style.backgroundColor = "pink";
+        });
+         // MOUSEOUT THI APRE JENE EVENT API HOI ANA PR MOUSE LAI NE PA6A KHASEDIYE TYREANA PR  EVENT LAGSE
+        btn.addEventListener('mouseout', function () {
+            prt.firstElementChild.nextElementSibling.style.backgroundColor = "skyblue";
+        });
+        // MOUSEDOWN THI APRE JENA PR EVENT LAGADVI HOI TENA PR JAI MOUSE NU BUTTON JYA SUDHI DABAVI RAKHSU TYA SUDHI A EVENT REHSE
+        btn.addEventListener('mousedown', function () {
+            prt.lastElementChild.previousElementSibling.style.backgroundColor = "blue";
+        });
+         // MOUSEUP THI APRE JENA PR EVENT LAGADVI HOI TENA PR JAI MOUSE NU BUTTON ANA PR DABAVI NE PA6U KHASEDSU TYRE A EVENT LAGSE
+        btn.addEventListener('mouseup', function () {
+            prt.lastElementChild.style.backgroundColor = "grey";
+        });
+
+        let prt1 = document.getElementById("ul");
+        let btn1 = document.getElementById("btn1");
+        // CLICK THI JENE EVENT API HSE TENA PR CLICK KARVATHI A EVENT LAGI JSE
+        btn1.addEventListener('click',function(){
+            prt1.firstElementChild.style.backgroundColor = "red";
+        });
+        // DBLCLICK THI JENE EVENT API HSE ANA PR DOUBLE CLICK KRSU TYRE A EVENT LAGI JSE
+        btn1.addEventListener('dblclick',function(){
+            prt1.firstElementChild.nextElementSibling.style.backgroundColor = "purple";
+        });
+        // CONTEXTMENU THI JENE EVENT APVANI HSE TENA PR RIGHT CLICK KARVATHI A EVENT LAGI JSE
+        btn1.addEventListener('contextmenu',function(){
+            prt1.lastElementChild.previousElementSibling.style.backgroundColor = "wheat";
+        });
+        btn1.addEventListener('mouseover',function(){
+            prt1.lastElementChild.style.backgroundColor = "green";
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>CREAT AND APPEND</h1>
+    <ul id="main">
+        <li>List-1</li>
+        <li>List-2</li>
+        <li>List-3</li>
+        <li>List-4</li>
+    </ul>
+    <script>
+        let prt = document.getElementById("main");
+        let list = document.createElement("li");
+        let text = document.createTextNode("Pratik");
+        list.appendChild(text);
+        prt.appendChild(list);
+        let list1 = document.createElement("li");
+        let text2 = list1.textContent = "Chasiya";
+        prt.appendChild(list1);
+        let list2 = document.createElement("li");
+        let text3 = list2.textContent = "hello";
+        document.body.appendChild(list2);
+        let list4 = prt.firstElementChild
+    </script>
+
+    <script>
+
+    </script>
+</body>
+
+</html>

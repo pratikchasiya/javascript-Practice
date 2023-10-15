@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #body {
+            background-color: cyan;
+            padding: 50px;
+        }
+
+        #main {
+            background-color: darkgreen;
+            padding: 50px;
+        }
+
+        #btn {
+            padding: 10px 20px;
+            color: darkkhaki;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="body">
+        <div id="main">
+            <button id="btn">Click here</button>
+        </div>
+    </div>
+    <script>
+       // STOP PROPAGATION A EK METHOD CHE
+       // STOP PROPAGATION KARIYE TYRE FUNCTION MA EK PARAMETER PASS KARVU JARURI 6
+       // CHILD NI EVENT PAR THI PARENTS NI EVENT ROKVI HOI TO STOP PROPAGATION() USE THY
+        let body1 = document.getElementById("body");
+        body1.addEventListener('click', body);
+      
+
+        let main = document.getElementById("main");
+        main.addEventListener('click', div);
+
+        let button = document.getElementById("btn");
+        button.addEventListener('click', btn);
+
+        function body(event) {
+            console.log("body clickedd");
+
+        }
+        function div(event ) {
+            console.log("div clickedd");
+        }
+        function btn(event) {
+            console.log("button clickedd");
+            event.stopPropagation();
+            // JENA PR EVENT APVI HOI ANA PR STOP PROPAGATION METHOD LAGADVI M FUNCTION MA PARAMETER APVU PDE
+            // AHIYA ONLY BUTTON PR J EVENT LAGSE
+        }
+
+    </script>
+</body>
+</html>

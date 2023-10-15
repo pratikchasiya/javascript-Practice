@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>SELECT ELEMENT BY CLASS</h1>
+    <ul>
+        <li class="cls">Oscar</li>
+        <li>Career</li>
+        <li class="cls">Point</li>
+        <li class="cls cl">list-1</li>
+        <li class="cls cl">list-2</li>
+    </ul>
+    <script>
+        // CLASS USE KRIYE TYRE LOOP CHALLAVAVI PDE
+        //ELM EK ARRAY BANSE
+        let elm = document.getElementsByClassName("cls");
+        // for(let i=0;i<elm.length; i++){
+        //     elm[i].innerHTML = "hello";
+        // }
+
+        // FOR OF LOOP
+        for(let x of elm){
+            x.innerHTML = "Hello";
+        }
+        console.log(elm);
+        // JO KOI PN ELEMENT MA 2 CLASS APYA HOI AND APRE ANE CHANGE KRVU HOI TO TYA BNNE CLASS NA NAME LAKHI AMA CHANGE KARI SAKAY
+        let elm1 = document.getElementsByClassName("cls cl");
+        for(let y of elm1){
+            y.innerHTML = "Pratik";
+        }
+        console.log(elm1);
+       
+    </script>
+</body>
+</html>

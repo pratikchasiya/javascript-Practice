@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>FOR EACH METHOD</h1>
+    <script>
+        let book = ["maths", "reasoning", "english"];
+        book.forEach(show);
+        function show(book) {
+            console.log(book);
+        }
+
+
+        let student = ["Pratik", "Mehul", "Darshan"];
+        student.forEach(show1);
+        function show1(item, index, arr) {
+            arr[index] = "Hello " + item;
+        }
+        console.log(student);
+
+        //FOREACH WITH ARROW FUNCTION
+        let students = ["pratik", "mehul", "darshan"];
+        students.forEach((element) => {
+            console.log(element);
+        });
+
+        //USING FOR LOOP
+        let num = [10, 20, 30, 40, 50];
+        let num2 = [];
+        for (let i = 0; i < num.length; i++) {
+            num2.push(num[i]);
+        }
+        console.log(num2);
+
+        //USING FOR EACH
+        let number = [10, 20, 30, 40, 50];
+        let number2 = [];
+        number.forEach(function (x) {
+            number2.push(x);
+        })
+        console.log(number2);
+
+        //USING ARROW FUNCTION
+        let name = ["pratik", "mehul"];
+        let name2 = [];
+        name.forEach((y) => {
+            name2.push(y);
+        })
+        console.log(name2);
+    </script>
+</body>
+
+</html>

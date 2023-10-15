@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Time out</h1>
+
+    <script>
+        // SET TIME OUT THI APRE AMUK TIME P6I APRE OUTPUT JOI SAKIYE APRE JETLO TIME AAPYO HOI A RITE
+        // SET TIME OUT MA 2 PARAMETER PASS KARVANA 1ST FUNCTION NAME AND 2ND MILLISECONE
+        // SET TIME OUT THI APRE EK J VAR TIME OUT EXECUTE THSE A P6I NI THSE
+        setTimeout(show, 3000);
+        function show() {
+            console.log("Hello world"); // 3 SECOND P6I EXECUTE THSE
+        }
+
+        /// CLEAR TIME OUT() 
+        //== ANATHI APSE J TIME OUT APYO HSE ANE STOP KARI DESE ANE KRTA PEHLA AAPRE FUNCTION NE JYA CALL KARVAYU HOI TYA ANE EK VARIABLE MA DEFINE KARVU PDE AND A VARIABLE NE CLEAT TIMEOUT NA PARAMETER MA PASS KRVU====
+
+        let time = setTimeout(show1,3000);
+        function show1(){
+            console.log("Please subscribe");
+        }
+        clearTimeout(time);  // AHI CLEAR KRI DESE MEANS STOP KRI DESE ANE AND 3 SECOND P6I HVE EXECUTE THSE NAI
+    </script>
+</body>
+
+</html>

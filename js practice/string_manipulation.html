@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <h1>
+            STRING MANIPULATION
+        </h1>
+    </div>
+    <script>
+        // =======STRING JOINT==========
+        // ========1st. TYPE ADDITION METHOD(+)============
+        let str1 = "Pratik";
+        let str2 = "Natvarbhai";
+        let str3 = "Chasiya";
+        // let str = str1 + " " + str2 + " " + str3;
+
+
+        // =======2nd. TYPE CONCAT METHOD=========
+
+        // let str = str1.concat(str2, " ", str3);
+
+        // ========3rd. TYPE TEMPLET LATERAL METHOD======
+
+        let str = `${str1} ${str2} ${str3}`;
+        console.log(str);
+
+        // =====STRING LENGHT=======
+        let len = "Oscar career point";
+        console.log(len.length);
+        //   =====STRING MA PARTICULAR CHARACTER BATAVAVA MATE====
+        console.log(len[4]);  /* output r */
+
+        // ======STRING IN FOR LOOP=======
+        let x = "Pratik Chasiya";
+        for (i = 0; i < x.length; i++){
+            console.log(x[i]);
+            // =========OUTPUT PRATIK CHASIYA=====
+        }
+
+        // ======= 2 STRING COMPARISION========
+
+        let com1 = "Oscar";
+        let com2 = "Point";
+        if(com1 == com2){
+            console.log("Equal");
+        } 
+        else{
+            console.log("Not Equal");
+        }
+
+        // ========  SUBSTR =============
+
+        let sub = "My name is Pratik Chasiya. I am from Surat";
+        let sub1 = sub.substr(11,14); /* substr ma pehla jyathi j word joito hoi ani pehla index no lakhvano ana p6i ani length lakhvi */
+        console.log(sub1);  /* output pratik chasiya */
+
+        // ======== SUBSTRING =============
+        let sub2 = "My name is Pratik Chasiya. I am from Surat";
+        let sub3 = sub2.substring(11,18); /* substring ma start index position ane ana p6i ending index position lakhvi */
+        console.log(sub3);  /* output pratik */
+
+        // ====== INDEXOF SUBSTRING NI POSITION JANVA MATE USE THY====
+        let index =  "My name is Pratik Chasiya. My father name is Natvarbhai. I am from Surat";
+        // let index1 = index.indexOf("Pratik");  /* output 11 */
+        /* indexOf ma ek j word 2 var hoi ani position janvi hoi to a word lakhya p6i ketla ma word p6i a word 6 a lakhvanu jem k ama 9 word p6i a check krse to ama father p6i na name ni index mlse */
+        let index1 = index.indexOf("name",9);
+        console.log(index1);
+
+        // ======== LASTINDEXOF ===========
+        let position = "My name is Pratik Chasiya. My father name is Natvarbhai. I am from Surat";
+        // let position1 = position.lastIndexOf("Natvarbhai");  /* output 45 */
+        // =====lastIndexOf ma name ni poistion janva mate name lakhyu ana p6i 9 lakhyu to a 9 sudhi ma name hse tne position batavse===
+        // ======= lastindex of ma j word sodhvano che a pa6ar thi check krse pn ani index agar thi ganvanu start krse ====
+        let position1 = position.lastIndexOf("name",9);
+        console.log(position1);
+
+        // ====== TRIM ANO USE AGAR PA6AR NI SPACE DUR KARVA MATE THAY CHE======
+        let trim = "   My name is Pratik Chasiya   "   ;
+        let trim1 = trim.trim();
+        console.log(trim);
+        console.log(trim1);
+        // =======ONLY AGAR THI SPACE DUR KARVI HOI TO TRIMSTART USE THAY====
+        let trim3 = "   My name is Pratik Chasiya   "   ;
+        let trim4 = trim3.trimStart(); /* only agar thi space dur thse */
+        let trim5 = trim3.trimEnd(); /* only pa6ar thi space dur thse */
+        console.log(trim3);
+        console.log(trim4);
+        console.log(trim5);
+
+
+        // ========UPPER CASE MA LAKHVA MATE STRING ME========
+        let upper = "Pratik Chasiya";
+    //    ======aa badha function hovathi ani pa6ae () avse======
+        console.log(upper.toUpperCase()); /* output PRATIK CHASIYA */
+        console.log(upper.toLowerCase()); /* output pratik chasiya */
+
+
+        // ============REPLACE SUBSTRING NE REPLACE KRVSA USE THAY====
+        let rep = "My name is Pratik Chasiya"
+        let rep1 = rep.replace("Pratik","Sanju");  /* Pratik ni jagya Sanju replace thai jse */
+        console.log(rep1);
+
+
+        // ====== INCLUDES NO USE KOI STRING KOI WORD CHE K NATHI A CHECK KRVA USE THY====
+        let include = "My name is Pratik Chasiya";
+        let include1 = include.includes("Pratik");  /* output true */
+        // let include1 = include.includes("pratik");  /* output false */
+        console.log(include1);
+
+
+
+        // ===========OTHER METHOD ========
+
+        // ======= STARTSWITH ======
+        // ====AMA JOO STRING APRNE J WORD THI JOITO HOI ANATHI START THTO HOI TO OUTOUT TRUE AVSE===
+        let strt = "Javascript is fun";
+        let strt2 = strt.startsWith("Java");  /* output true */
+        // let strt2 = strt.startsWith("script");  /* output false */
+        console.log(strt2);
+
+
+        // ======= ENDSWITH ======
+        let end = "Javascript is fun";
+        let end2 = strt.endsWith("fun");  /* output true */
+        // let end2 = strt.endsWith("Java");  /* output false */
+        console.log(end2);
+
+        // ======REPEAT=======
+        let repet = "Pratik Chasiya \t";
+        let repet2 = repet.repeat(2);
+        console.log(repet2);  /* output Pratik Chasiya Pratik Chasiya */
+
+        // ==== CHARAT==========
+        // ==== AMA APRNE J INDEX VALUE APSE TENI VALUE BATAVSE ===
+        let char = "Hello world";
+        let char2 = char.charAt(4);
+        console.log(char2);  /* output o */
+
+        // ======== CHARCODEAT =========
+        // ====== ASCII VALUE BATAVSE ===
+        let code = "Hello world";
+        let code2 = code.charCodeAt(4);
+        console.log(code2);  /* output 111 */
+
+        // ====== PADSTART ==========
+        // ======= AMA AGAR THI PADDING APSE=====
+
+        let pad = "CODE";
+        let pad2 = pad.padStart(10, "*");
+        // ====== AHI 10 TARGET LENGTH BATAVSE STRING NI AND * PAD STRING BATAVSE =====
+        console.log(pad2);  /* output ******CODE */
+
+        // ========= PADEND ========
+        // ======= AMA PA6AR THI PADDING APSE =======
+
+        let padend = "CODE";
+        let padend2 = pad.padEnd(10, "*");
+          // ====== AHI 10 TARGET LENGTH BATAVSE STRING NI AND * PAD STRING BATAVSE =====
+        console.log(padend2);  /* output  CODE****** */
+
+
+        // ======== REPLACEALL ======
+        let replace3 = "ball bat";
+        let replace4 = replace3.replaceAll('b','c');
+        console.log(replace4);  /* output call cat */
+
+
+        // ========= SLICE ===========
+         let slice = "Javascript is fun";
+         let slice2 = slice.slice(0,10);
+        //  ==== 0 is begin index and 10 is end index ==========
+         console.log(slice2);  /* output Javascript */
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PROPERTY GETTERS AND SETTERS</h1>
+    <script>
+        // JYRE DATA NE MANIPULATE KARVO HOI MEANS K (ORIGINAL DATA MA CHANGE KRI NE ADD KARI, REMOVE KARI NE OBJECT NI BAHAR MOKLVO HOI TYRE GETTER FUNCTION USE THY
+        // KOI PN METHOD NE PROPERTY NI JEM CALL KARVU HOI TO GETTER FUNCTION USE THY
+        // GETTER FUNCTION MA ORIGINAL DATA CHANGE THSE NAI 
+        let person = {
+            firstName : "Pratik",
+            lastName : "Chasiya"
+        };
+        // PROPERTY CALL THAI CHE
+        console.log(person.firstName.toUpperCase()); // PRATIK
+
+        let person1 = {
+            firstName : "Mehul",
+            lastName : "Waghela",
+
+            getname : function (){
+          return this.firstName.toUpperCase();
+            }
+        };
+        // METHOD CALL THAY CHE
+        console.log(person1.getname()); // output : MEHUL
+
+        // GETTER FUNCTION
+        let person3 = {
+            firstName : "Karan",
+            lastName : "Surti",
+
+            get getname(){
+                return this.firstName.toUpperCase();
+            }
+        };
+        console.log(person3.getname); // output : KARAN
+
+        // SETTER FUNCTION
+        // JYRE DATA NE SAVE KRAVTI VAKHTE  ANE CHANGE KRVU HOI TYRE SETTER FUNCTION USE THY
+        // SETTER FUNCTION MA ORIGINAL FUNCTION MA PN CHANGE THSE
+
+        let person4 = {
+            firstName : "Mayur",
+            lastName : "Waghela",
+
+            // n == PARAMETER APVO PDE SETTER FUNCTION MA
+            set setname (n){
+                this.firstName = n.toUpperCase();
+            }
+        };
+        person4.setname = "Bhavesh"; // N NE BHAVESH MLASE ATLE CHANGE THAI JSE BHAVESH MA
+
+        console.log(person4.firstName); // output : BHAVESH
+        console.log(person4);
+        // output : {firstName: 'BHAVESH', lastName: 'Waghela'} AHI ORIGINAL DATA MA PN NAME CAPITAL THAI GYU
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Pratik</h1>
+    </div>
+    <script>
+        /* string-joint type */
+        let x = "oscar", y = "career";
+
+         /* 1st type + thi 2 string ne joint kri sakay + kri ne " " ma space apvathi space thse banne vacche */
+        let z = x +" " + y +" " + "point"; 
+        console.log(z);
+
+        // ==2nd type ane TEMPLATE LATERAL PN KEHVAY (`` = acute sign) ma ${} ma variable lakhvanu ane jo a variable na hoi to ane amj lakhvu jem k point lakhyu a rite==
+        let a = "Pratik", b = "Natvarbhai";
+        let w = `${a} ${b} Chasiya`;  
+        console.log(w);
+
+        /* 3rd type ama concat thi 2 string ne jodi sakay ane ama 2 string ne jodva , use thay */
+        let c = "Chasiya", d = "Pratik";
+        let s = c.concat(" ",d, " ", "Natvarbhai");
+        console.log(s);
+    </script>
+</body>
+</html>

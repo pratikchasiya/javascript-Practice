@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         div{
+            height: 400px;
+            width: 400px;
+            border: 1px solid black;
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+    <script>
+        // SCROLL UP THY CHE K DOEN TE DETECT KARVA WHEEL EVENT USE THY
+        // DELTA Y VERTICAL MATE USE THY
+        // DELTA X HORIZONTAL MATE USE THY
+        // EVENT.DELTA Y JYRE SCROLL THTU NAI HOI TYRE TENI VALUE ZERO HSE
+        // WHEEL EVENT MA PARAMETER PASS KRVO PDSE
+        window.addEventListener('wheel',function(event){
+            if(event.deltaY < 0){
+                console.log("scrolling up");
+                // JYRE DELTA Y 0 THI LESS HSE MEANS APRE SCROLL UP KRSU TE DETECT KRSE
+            }
+            else if(event.deltaY > 0){
+                console.log("scrolling down");
+                // JYRE DELTA Y 0 THI VADHRE HSE MEANS APRE SCROLL DOWN KRSU TE DETECT KRSE
+            }
+        })
+    </script>
+</body>
+</html>

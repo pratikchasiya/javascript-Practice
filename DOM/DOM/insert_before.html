@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>INSERT BEFORE</h1>
+    <ul id="ul">
+        <li>List-1</li>
+        <li>List-2</li>
+        <li>List-3</li>
+        <li>List-4</li>
+    </ul>
+    <script>
+        let ul = document.getElementById("ul");
+        let list = document.createElement("li");
+        list.textContent = "List-5";
+        let pos = ul.lastElementChild.previousElementSibling;
+        ul.insertBefore(list, pos);  /* 2 PARAMETER APVA PADE 1ST J LAKHVU CHE TE AND 2ND ANI POSITION */
+        // KOI ELEMEMNT NE VACCHE GME TYA INSERT KRAVAVU HOI TO JENI AGAR K PA6AR ANE ADD KARAVAVU 6 ANE PEHLA PAKDVU PDW P6I ANE INSERT BEFORE KARAVVU PDE AMA P6I ()MA PEHLA PARAMETER MA SU LAKHVU 6 TE ABD SECOND PARAMETER MA ANI POSITION APVI PDE
+
+        // BODY NI UNDER KOI ELEMENT NE UL NI PEHLA INSERT KARAVAVA MATE
+        let item = document.createElement("li");
+        item.textContent = "List-6";
+        document.body.insertBefore(item,ul);
+        // UL NI UPAR BODY MA LIST-6 ADD THAI JSE
+    </script>
+</body>
+</html>

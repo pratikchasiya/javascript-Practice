@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 1500px;
+            width: 100%;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+    <script>
+        // PAGE Y OFFSET === VERTICAL MATE USE THY
+        // PAGE X OFFSET === HORIZONTAL MATE USE THY
+        // AMUK PIXEL HEIGHT P6I SCROLL THYY P6I TE OUTPUT JOVU HOI MEANS DETECT KARVU HOI TO SCROLL EVENT MA APRE WINDOW MA APRE AMUK HEIGHT P6I KAI KRVU HOI TO ANE WINDOW.PAGE OFFSET X KA TO YE API NE OUTPUT LAVI SAKAY
+        window.addEventListener('scroll',function(){
+            if(window.pageYOffset > 150){
+                document.body.style.backgroundColor = "green";
+            }
+            // 150 PX P6I SCROLL KRSU TO BACKGROUND COLOR GREEN THAI JSE
+           if(window.pageYOffset > 400){
+                document.body.style.backgroundColor = "pink";
+            }
+             // 400 PX P6I SCROLL KRSU TO BACKGROUND COLOR PINK THAI JSE
+            if(window.pageYOffset > 700){
+                document.body.style.backgroundColor = "skyblue";
+            }
+             // 700 PX P6I SCROLL KRSU TO BACKGROUND COLOR SKYBLUE  THAI JSE
+        })
+    </script>
+</body>
+</html>

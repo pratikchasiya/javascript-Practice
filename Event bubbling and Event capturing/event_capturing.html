@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #body {
+            background-color: cyan;
+            padding: 50px;
+        }
+
+        #main {
+            background-color: darkgreen;
+            padding: 50px;
+        }
+
+        #btn {
+            padding: 10px 20px;
+            color: darkkhaki;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="body">
+        <div id="main">
+            <button id="btn">Click here</button>
+        </div>
+    </div>
+    <script>
+        // EVENT CAPTURING MA PARENT TO CHILD EVENT LAGSE
+        // BODY PR CLICK KRSU TO BODY PR EVENT LAGSE
+        // DIV PR CLICK KARSU TO BODY AND DIV PR EVENT LAGSE
+        // BUTTON PR CLICK KARSU TO BODY DIV AND BUTTON 3 NE PN EVENT LAGSE
+        // EVENT CAPTURING MA PARAMETER MA TRUE PARAMETER APVO JARURI 6
+        let body1 = document.getElementById("body");
+        body1.addEventListener('click', body , true);
+        // body1.addEventListener('click',body, true); AHIYA 3 PARAMETER HOI PN EVENT CAPTURING MA BY DEFAULT FALSE VALI PARAMETER CHANGE KARI NE TRUE KARIYE TO PARENTS TO CHILD EVENT LAGASE 
+
+        let main = document.getElementById("main");
+        main.addEventListener('click', div , true);
+
+        let button = document.getElementById("btn");
+        button.addEventListener('click', btn , true);
+
+        function body() {
+            console.log("body clickedd");
+
+        }
+        function div() {
+            console.log("div clickedd");
+        }
+        function btn() {
+            console.log("button clickedd");
+        }
+
+    </script>
+</body>
+</html>

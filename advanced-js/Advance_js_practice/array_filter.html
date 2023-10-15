@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ARRAY FILTER METHOD</h1>
+    <script>
+        let num = [10, -5, 17, -3, 44, -9, -41, 19, -55];
+
+        let result1 = num.filter(getPositiveValue);
+        function getPositiveValue(x){
+            return x > 0;
+        }
+        console.log(result1); // output : [10, 17, 44, 19]
+
+        let result2 = num.filter(x =>{
+            if(x % 2 == 0){
+                return x;
+            }  
+        });
+        console.log(result2); // output :  [10, 44]
+
+        let result3 = num.filter( x => x < 0);
+        console.log(result3); // output : [-5, -3, -9, -41, -55]
+    </script>
+</body>
+</html>

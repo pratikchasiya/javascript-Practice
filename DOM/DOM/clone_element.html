@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CLONE ELEMENT</h1>
+    <ul id="main">
+        <li>List-1</li>
+        <li>List-2</li>
+        <li>List-3</li>
+        <li>List-4</li>
+    </ul>
+    <script>
+        // CLONE ELEMENT MEANS COPY KRVA MATE USE THY
+        // PEHLA PARENTS NE PAKDI ANE CLONENODE API AMA TRUE KA TO FALSE VALUE APVI KOI PARAMETER NA APSU TO BY DEFAULT FALSE LAI LESE AND TRUE APSU TO A AKHU COPY THAI JSE
+        // JO TRUE HSE TO PARENT AND CHILD BNNE COPY THSE... AND JO KAI NAI HOI ATLE FALSE ONLY PARENTS J COPY THSE
+        // COPY KARSU TO BNNE NA ID SAME HSE TETHI APRE J COPY KRYU ANI ID CHANGE KARI NAKHVU
+        // BODY NA LAST MA COPY THSE AND BNNE NA OID SAME HSE
+        let prt = document.getElementById("main");
+        let copy = prt.cloneNode(true);
+        document.body.appendChild(copy);
+        copy.id = "ul"; /* copy karyu ani id change thai ne "ul" thai gai hse */
+
+        let child = prt.firstElementChild.nextElementSibling;
+        let cpy = child.cloneNode(true);
+        document.body.appendChild(cpy); /* ONLY LIST 2 J COPY THSE BODY NA LAST MA */
+
+    </script>
+</body>
+</html>

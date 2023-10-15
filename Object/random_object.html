@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>RANDOM NUMBER OBJECT</h1>
+    <script>
+        let x = Math.random();
+        console.log(x);  // 0 to 1 sudhi no number aavse
+
+        // 0 TO 9 SUDHI NA KOI PAN NUMBER GENERATE KARVA MATE
+
+        // let y = Math.trunc(Math.random() * 10);  // 0 to 9 num avse
+        let y = Math.trunc(Math.random() * 100); // O TO 99 SUDHI NUMBER AVSE
+        // J PAN NUMBER JOITA HOI TENATHI EK VADHRE NUMBER THI ANE MULTIPLY KARVU
+        console.log(y);
+
+        // 1 TO 10 SUDHI NA NUMBER MATE
+
+        let z = Math.trunc(Math.random() * 10) + 1;
+        console.log(z);  // 1 TO 1O SUDHI NA NUMBER AVSE
+
+        // KOI RANGE VACCHE NUMBER JOI HOI TO
+        function randomNumber(min, max) {
+            let range = Math.trunc(Math.random() * (max - min)) + min;
+            console.log(range);
+        };
+        randomNumber(15, 25);
+        // AHI 15 THI 24 SUDHI NA NUMBER AVSE
+
+        function getRandom(min, max) {
+            let range1 = Math.trunc(Math.random() * (max - min + 1) + min);
+            return range1;
+        };
+        console.log(getRandom(15, 25));
+        // AHI 15 THI 25 SUDHI NA NUMBER AVSE
+
+        let book = ['maths', 'english', 'reasoning', 'hindi', 'science'];
+        function randomBook(min) {
+            let a = Math.trunc(Math.random() * min.length);
+            console.log(book[a]);
+        };
+        randomBook(book);
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>INSERT ADJACEMENTHTML</h1>
+    <ul id="ul">
+        <li>List-1</li>
+        <li>List-2</li>
+        <li>List-3</li>
+        <li>List-4</li>
+    </ul>
+    <script>
+        let prt = document.getElementById("ul");
+        let insert = "<li>Pratik</li>";
+        // BEFOREBEGIN THI UL NI BAHAR UPR NI SIDE ADD KARVA MATE USE THY
+        prt.insertAdjacentHTML('beforebegin', insert);
+        let insert1 = "<li>Pratik</li>";
+        // AFTERBEGIN THI UL NI UNDER UL P6I TRT ADD KARVA MATE USE THY
+        prt.insertAdjacentHTML('afterbegin', insert1);
+        let insert2 = "<li>Pratik</li>";
+        // BEFOREEND THI UL NA END NI JUST UPR ADD THSE
+        prt.insertAdjacentHTML('beforeend', insert2);
+        let insert3 = "<li>Pratik</li>";
+        // AFTEREND THI UL NA END P6I BAHAR NI SIDE ADD THSE
+        prt.insertAdjacentHTML('afterend', insert3);
+        //  insertAdjacentHTML MA 2 PARAMETER APVA PDE TEMA 1ST PARAMETER MA JYA ADD KARVU 6 TE LAKHVU AND 2ND PARAMETER MA J ADD KARVU 6 TE LAKHVU
+
+        // INSERTADJACENTELEMENT THI AA RITE THY
+        let x = document.createElement("li");
+        x.textContent = "hello";
+        // let z = x;
+        prt.insertAdjacentElement('beforebegin', x);
+    </script>
+</body>
+
+</html>

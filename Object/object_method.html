@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>OBJECT METHOD</h1>
+    <script>
+        let person = {
+            firstName: "Pratik",
+            lastName: "Chasiya",
+            age: 25,
+
+            //==== TYPE 3 ==========
+            sayHello: function () {
+                console.log("JAY SHREE RAM..!");
+            }
+          };
+        
+        person.sayHello();  // TYPE 3 OUTPUT
+        // output : JAY SHREE RAM..!!
+
+
+        //======== TYPE 1 ==========
+        person.sayHello = function () {
+            console.log("JAY SHREE RAM..!!");
+        }
+        person.sayHello();
+        // output : JAY SHREE RAM..!!
+
+        //====== TYPE 2 ========
+        function greet() {
+            console.log("JAY SHREE RAM..!!");
+        }
+        person.sayHello = greet;
+        person.sayHello();
+         // output : JAY SHREE RAM..!!
+
+         // ==== TYPE 4 ======
+         let person1 = {
+            firstName : "Sanju",
+            lastName : "Chasiya",
+            age : 25,
+
+            sayHello(){
+                console.log("JAY SHREE RAM..!!");
+            }
+            
+         };
+         person1.sayHello();
+          // output : JAY SHREE RAM..!!
+
+
+
+    </script>
+</body>
+
+</html>

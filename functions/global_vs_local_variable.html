@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <h1> GLOBAL VS LOCAL VARIABLE</h1>
+    </div>
+    <script>
+        let car = "Audi";  //GLOBAL VARIABLE  
+        function add() {
+            let num = 12;  // LOCAL VARIABLE
+            console.log(num);
+        }
+        function sub() {
+            let num = 7;
+            console.log(num)
+        }
+        add();
+        sub();
+    </script>
+
+    <!-- SAME NAME NA LOCAL VARIABLE ALAG ALAG FUNCTION MA USE KARI SAKAY -->
+    <!-- PN SAME NAME NA GLOBAL VARIABLE BIJI VAR USE NAI KARI SAKAY AND USE KARIYE TO ERROR AVSE -->
+    <!-- GLOBAL VARIABLE GME TYA USE KARI SAKAY FUNCTION NI UNDER AND BAHAR BADHE -->
+    <!-- LOCAL VARIABLE ONLY FUNCTION NI UNDER J USE KARI SAKAY ANE JO BAHAR USE KARIYE TO ERROR AVSE -->
+</body>
+
+</html>

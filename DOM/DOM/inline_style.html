@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #main{
+            background-color: ;
+        } */
+    </style>
+</head>
+
+<body>
+    <h1>INLINE STYLE</h1>
+    <button id="main" style="padding : 20px 25px">Click me</button>
+    <button id="btn">Send</button>
+    <button id="btn2" style="background-color: aquamarine;">Send</button>
+    <script>
+        let btn = document.getElementById("main");
+
+        // TYPE 1 
+        // CSS TEXT
+        btn.style.cssText += "background-color : red; color : white;";
+        // AMA JETLI STYLE APVI HSE ATLE EK SATHE API SAKASE CSSTEXT THI
+        //  PEHLA AAPRE INLINE STYLE API HOI N CSSTEXT KOI STYLE APSU TO INLINE STYLE VALI STYLE NIKRI JSE AND CSSTEXT VALI ONLY STYLE REHSE PN APRE BANNE STYLE RAKHVI += KARI NE BANNE STYLE ADD KARI SAKAY
+
+        // TYPE 2
+        // SET ATTRIBUTE THI
+        let btn1 = document.getElementById("btn");
+        btn1.setAttribute("style", "color : blue; background-color : yellow;");
+        // SET ATTRIBUTE THI STYLE NAME NO ATTRIBUTE ADD KRI NE AMA PM STYLE API SAKAY
+
+       // TYPE 3
+       // INDIVIDUAL STYLE APVI HOI TO
+
+       let btn2 = document.getElementById("btn2");
+       btn2.style.color = "green";
+       btn2.style.padding = "20px 25px"
+       
+
+
+
+    </script>
+</body>
+
+</html>

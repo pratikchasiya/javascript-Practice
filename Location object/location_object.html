@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>LOCATION OBJECT</h1>
+<button id="btn" onclick="show()">Redirect to google</button>
+<button id="btn1" onclick="reload()">Reload</button>
+
+<body>
+    <script>
+        //1. CURRENT URL NI INFORMATION JANVA MATE
+
+        // URL APSE HREF THI
+        console.log(location.href);  // output : http://192.168.1.45:5500/location_object.html
+
+        // URL NU PATH NAME APSE MEANS KAI JAGYA A APRI FILE 6 ANO PATH APSE
+        console.log(location.pathname);  // output : /location_object.html
+
+        // URL NO PROTOCOL APSE
+        console.log(location.protocol); // output : http:
+
+        // 2. REDIRECT KARVA MATE BIJI JAGYA PR
+        // METHOD 1 AND METHOD 2 A ASSIGN METHOD CHE
+        // FIRST 3 METHOD THI BROWSER NI HISTORY MA ENTRY APSE ATLE ANI HISTORY JOVA MLSE BACK BUTTON JOVA MLSE ANA PR CLICK KARVTHI PA6U JYA HSU TYA AVI JSU
+
+        // METHOD 1 (WINDOW.LOCATION)
+        function show(){
+            window.location = "https://www.google.com"; // BUTTON PR CLICK KARVATHI DIRECT GOOGLE PR REDIRECT KARI SAKAY
+        }
+
+        // METHOD 2 (LOCATION.HREF)
+
+        location.href = "https://www.yahoo.com"; // REDIRECT KARSE YAHOO PR
+
+        // METHOD 3 (LOCATION.ASSIGN)
+        location.assign("https://www.instagram.com/");  
+        // LOCATION ASSIGN A EK METHOD CHE TO () NI UNDER URL PASS KRVO TO A DIRECT INSTAGRAM MA REDIRECT KARSE
+
+        // METHOD 4 (LOCATION.REPLACE)
+
+        location.replace("https://www.google.com"); 
+        // BIJI BDHI METHOD JEVU J SAME WORK KRSE BUT BROWSER NI HISTORY MA ENTRY APSE NAI BACK BUTTON MALSE NAI
+
+        // WEBPAGE MA RELOAD KARVA MATE (LOCATION.RELOAD())==
+      
+        function reload(){
+            location.reload(); 
+            // REFRESH VALA BUTTON PR CLICK KARVATHI J WEBPAGE REFRESH THSE BUT LOCATION.RELOAD THI APRE A BUTTON PR CLICK KARSU TO PN RELOAD THSE
+        }
+
+    </script>
+</body>
+
+</html>
